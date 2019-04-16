@@ -43,39 +43,40 @@ ColorRGB obtenerColorPixel(const Rayo &r, vector<ObjetoGeometrico *> objetos, Lu
         {
             if (objetos[i]->hayImpacto(r, t, n, q) && t < tmin)
             {
-                // color.r = objetos[i]->obtenerColor().r;
-                // color.g = objetos[i]->obtenerColor().g;
-                // color.b = objetos[i]->obtenerColor().b;
-
-                // color.r = objetos[i]->obtenerColor().r * luz.color.r * std::max(0.0, n * (luz.posicion - q).hat() );
-                // color.g = objetos[i]->obtenerColor().g * luz.color.g * std::max(0.0, n * (luz.posicion - q).hat() );
-                // color.b = objetos[i]->obtenerColor().b * luz.color.b * std::max(0.0, n * (luz.posicion - q).hat() );
-
-                // color.r = objetos[i]->obtenerColor().r * luz.color.r * std::max(0.0, n * (luz.posicion - q).hat() ) + objetos[i]->obtenerColor().r * luz.color.r * pow(std::max(0.0, n * ((-1)*r.d + (luz.posicion - q).hat()).hat() ),10000);
-                // color.g = objetos[i]->obtenerColor().g * luz.color.g * std::max(0.0, n * (luz.posicion - q).hat() ) + objetos[i]->obtenerColor().g * luz.color.g * pow(std::max(0.0, n * ((-1)*r.d + (luz.posicion - q).hat()).hat() ),10000);
-                // color.b = objetos[i]->obtenerColor().b * luz.color.b * std::max(0.0, n * (luz.posicion - q).hat() ) + objetos[i]->obtenerColor().b * luz.color.b * pow(std::max(0.0, n * ((-1)*r.d + (luz.posicion - q).hat()).hat() ),10000);
-
-                color.r = objetos[i]->obtenerColor().r * luz_ambiente.color.r + objetos[i]->obtenerColor().r * luz.color.r * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().r * luz.color.r * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10);
-                color.g = objetos[i]->obtenerColor().g * luz_ambiente.color.g + objetos[i]->obtenerColor().g * luz.color.g * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().g * luz.color.g * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10);
-                color.b = objetos[i]->obtenerColor().b * luz_ambiente.color.b + objetos[i]->obtenerColor().b * luz.color.b * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().b * luz.color.b * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10);
-
-                // cout<<"[ "<<color.r<<", "<<color.g<<", "<<color.b<<" ]"<<endl;
+                color.r = objetos[i]->obtenerColor().r * luz_ambiente.color.r + objetos[i]->obtenerColor().r * luz.color.r * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().r * luz.color.r * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
+                color.g = objetos[i]->obtenerColor().g * luz_ambiente.color.g + objetos[i]->obtenerColor().g * luz.color.g * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().g * luz.color.g * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
+                color.b = objetos[i]->obtenerColor().b * luz_ambiente.color.b + objetos[i]->obtenerColor().b * luz.color.b * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().b * luz.color.b * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
                 tmin = t;
             }
         }
         return color;
     }
 }
+
 int main()
 {
 
-    LuzPuntual luz(1.0, 1.0, 1.0, 0, 0, -30);
+    LuzPuntual luz(1.0, 1.0, 1.0, 0, 50, -30);
     LuzPuntual luz_ambiente(1.0, 1.0, 1.0, 0.0, 0.0, 0.0);
     vector<ObjetoGeometrico *> escena;
 
     //escena.push_back(&esfera1);
     // ESCENA------------------------------------------------------------------
+    Punto3D cara(0, 0, -100);
+    Esfera esfera_cara(cara, 200);
+    esfera_cara.establecerColor(0, 1, 0);
+
+    Punto3D ojo(0, 50, -50);
+    Esfera esfera_ojo(ojo, 100);
+    esfera_ojo.establecerColor(1, 1, 1);
     
+    Punto3D pupila(0, 50, -25);
+    Esfera esfera_pupila(pupila, 40);
+    esfera_pupila.establecerColor(0, 1, 1);
+
+    escena.push_back(&esfera_cara);
+    escena.push_back(&esfera_ojo);
+    escena.push_back(&esfera_pupila);
 
 
     // VIEWPLANE
