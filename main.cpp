@@ -74,10 +74,19 @@ int main()
     Esfera esfera_pupila(pupila, 40);
     esfera_pupila.establecerColor(0, 1, 1);
 
+    Punto3D iris(0, 50, -15);
+    Esfera esfera_iris(iris, 20);
+    esfera_iris.establecerColor(0,0,0);
+
+    Punto3D brilloOjo(7, 62, 0);
+    Esfera esfera_brilloOjo(brilloOjo, 5);
+    esfera_brilloOjo.establecerColor(1,1,1);
+
     escena.push_back(&esfera_cara);
     escena.push_back(&esfera_ojo);
     escena.push_back(&esfera_pupila);
-
+    escena.push_back(&esfera_iris);
+    escena.push_back(&esfera_brilloOjo);
 
     // VIEWPLANE
     int hres = 800;
