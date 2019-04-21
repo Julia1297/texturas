@@ -56,11 +56,10 @@ ColorRGB obtenerColorPixel(const Rayo &r, vector<ObjetoGeometrico *> objetos, Lu
 int main()
 {
 
-    LuzPuntual luz(1.0, 1.0, 1.0, 0, 50, -30);
-    LuzPuntual luz_ambiente(1.0, 1.0, 1.0, 0.0, 0.0, 0.0);
+    LuzPuntual luz(0.5, 0.5, 0.5,-350,-250,-80);
+    LuzPuntual luz_ambiente(0.5, 0.5, 0.5, 0.0, 0.0, 0.0);
     vector<ObjetoGeometrico *> escena;
 
-    //escena.push_back(&esfera1);
     // ESCENA------------------------------------------------------------------
     Punto3D cara(0, 0, -100);
     Esfera esfera_cara(cara, 200);
@@ -78,9 +77,76 @@ int main()
     Esfera esfera_iris(iris, 20);
     esfera_iris.establecerColor(0,0,0);
 
-    Punto3D brilloOjo(7, 62, 0);
+    Punto3D brilloOjo(7, 62, -0);
     Esfera esfera_brilloOjo(brilloOjo, 5);
     esfera_brilloOjo.establecerColor(1,1,1);
+
+    Punto3D A_orejaIzquierda(-65,190,-100);
+    Punto3D B_orejaIzquierda(-80,220,-100);
+    Punto3D C_orejaIzquierda(-95,176,-100);
+
+    Punto3D A_orejaDerecha(65,190,-100);
+    Punto3D B_orejaDerecha(80,220,-100);
+    Punto3D C_orejaDerecha(95,176,-100);
+
+    Triangulo orejaIzquierda(A_orejaIzquierda,B_orejaIzquierda,C_orejaIzquierda);
+    orejaIzquierda.establecerColor(1,1,1);
+    Triangulo orejaDerecha(A_orejaDerecha,B_orejaDerecha,C_orejaDerecha);
+    orejaDerecha.establecerColor(1,1,1);
+
+
+    Punto3D A_piernaIzquierda1(-95,-176,-100);
+    Punto3D B_piernaIzquierda1(-65,-190,-100);
+    Punto3D C_piernaIzquierda1(-70,-260,-100);
+
+    Punto3D A_piernaIzquierda2(-95,-170,-100);
+    Punto3D B_piernaIzquierda2(-70,-260,-100);
+    Punto3D C_piernaIzquierda2(-100,-260,-100);
+
+    Triangulo piernaIzquierda1(A_piernaIzquierda1,B_piernaIzquierda1,C_piernaIzquierda1);
+    piernaIzquierda1.establecerColor(0,1,0);
+    Triangulo piernaIzquierda2(A_piernaIzquierda2,B_piernaIzquierda2,C_piernaIzquierda2);
+    piernaIzquierda2.establecerColor(0,1,0);
+
+    Punto3D A_piernaIzquierda3(-100,-260,-100);
+    Punto3D B_piernaIzquierda3(-70,-260,-100);
+    Punto3D C_piernaIzquierda3(-50,-360,-100);
+
+    Punto3D A_piernaIzquierda4(-100,-260,-100);
+    Punto3D B_piernaIzquierda4(-50,-360,-100);
+    Punto3D C_piernaIzquierda4(-75,-360,-100);
+
+    Triangulo piernaIzquierda3(A_piernaIzquierda3,B_piernaIzquierda3,C_piernaIzquierda3);
+    piernaIzquierda3.establecerColor(0,1,0);
+    Triangulo piernaIzquierda4(A_piernaIzquierda4,B_piernaIzquierda4,C_piernaIzquierda4);
+    piernaIzquierda4.establecerColor(0,1,0);
+
+    Punto3D A_piernaDerecha1(95,-176,-100);
+    Punto3D B_piernaDerecha1(65,-190,-100);
+    Punto3D C_piernaDerecha1(70,-260,-100);
+
+    Punto3D A_piernaDerecha2(95,-170,-100);
+    Punto3D B_piernaDerecha2(70,-260,-100);
+    Punto3D C_piernaDerecha2(100,-260,-100);
+
+    Triangulo piernaDerecha1(A_piernaDerecha1,B_piernaDerecha1,C_piernaDerecha1);
+    piernaDerecha1.establecerColor(0,1,0);
+    Triangulo piernaDerecha2(A_piernaDerecha2,B_piernaDerecha2,C_piernaDerecha2);
+    piernaDerecha2.establecerColor(0,1,0);
+
+    Punto3D A_piernaDerecha3(100,-260,-100);
+    Punto3D B_piernaDerecha3(70,-260,-100);
+    Punto3D C_piernaDerecha3(50,-360,-100);
+
+    Punto3D A_piernaDerecha4(100,-260,-100);
+    Punto3D B_piernaDerecha4(50,-360,-100);
+    Punto3D C_piernaDerecha4(75,-360,-100);
+
+    Triangulo piernaDerecha3(A_piernaDerecha3,B_piernaDerecha3,C_piernaDerecha3);
+    piernaDerecha3.establecerColor(0,1,0);
+    Triangulo piernaDerecha4(A_piernaDerecha4,B_piernaDerecha4,C_piernaDerecha4);
+    piernaDerecha4.establecerColor(0,1,0);
+
 
     escena.push_back(&esfera_cara);
     escena.push_back(&esfera_ojo);
@@ -88,9 +154,22 @@ int main()
     escena.push_back(&esfera_iris);
     escena.push_back(&esfera_brilloOjo);
 
+    escena.push_back(&orejaIzquierda);
+    escena.push_back(&orejaDerecha);
+
+    escena.push_back(&piernaIzquierda1);
+    escena.push_back(&piernaIzquierda2);
+    escena.push_back(&piernaIzquierda3);
+    escena.push_back(&piernaIzquierda4);
+
+    escena.push_back(&piernaDerecha1);
+    escena.push_back(&piernaDerecha2);
+    escena.push_back(&piernaDerecha3);
+    escena.push_back(&piernaDerecha4);
+
     // VIEWPLANE
-    int hres = 800;
-    int vres = 600;
+    int hres = 1000;
+    int vres = 800;
     double s = 1.0;
     ViewPlane vp(hres, vres, s);
 
