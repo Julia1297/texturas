@@ -56,8 +56,8 @@ ColorRGB obtenerColorPixel(const Rayo &r, vector<ObjetoGeometrico *> objetos, Lu
 int main()
 {
 
-    LuzPuntual luz(0.5, 0.5, 0.5,-350,-250,-80);
-    LuzPuntual luz_ambiente(0.5, 0.5, 0.5, 0.0, 0.0, 0.0);
+    LuzPuntual luz(0.2, 0.3, 0.6,-350,-250,-80);
+    LuzPuntual luz_ambiente(0.8, 0.7, 0.4, 0.0, 0.0, 0.0);
     vector<ObjetoGeometrico *> escena;
 
     // ESCENA------------------------------------------------------------------
@@ -147,6 +147,59 @@ int main()
     Triangulo piernaDerecha4(A_piernaDerecha4,B_piernaDerecha4,C_piernaDerecha4);
     piernaDerecha4.establecerColor(0,1,0);
 
+    Punto3D A_brazoIzquierdo1(-200,0,-100);
+    Punto3D B_brazoIzquierdo1(-320,0,-100);
+    Punto3D C_brazoIzquierdo1(-180,-25,-100);
+    Punto3D A_brazoIzquierdo2(-320,0,-100);
+    Punto3D B_brazoIzquierdo2(-320,-25,-100);
+    Punto3D C_brazoIzquierdo2(-180,-25,-100);
+    Triangulo brazoIzquierdo1(A_brazoIzquierdo1,B_brazoIzquierdo1,C_brazoIzquierdo1);
+    brazoIzquierdo1.establecerColor(0,1,0);
+    Triangulo brazoIzquierdo2(A_brazoIzquierdo2,B_brazoIzquierdo2,C_brazoIzquierdo2);
+    brazoIzquierdo2.establecerColor(0,1,0);
+
+    Punto3D A_brazoIzquierdo3(-320,0,-100);
+    Punto3D B_brazoIzquierdo3(-295,0,-100);
+    Punto3D C_brazoIzquierdo3(-260,130,-100);
+
+    Punto3D A_brazoIzquierdo4(-260,130,-100);
+    Punto3D B_brazoIzquierdo4(-280,130,-100);
+    Punto3D C_brazoIzquierdo4(-320,0,-100);
+
+    Triangulo brazoIzquierdo3(A_brazoIzquierdo3,B_brazoIzquierdo3,C_brazoIzquierdo3);
+    brazoIzquierdo3.establecerColor(0,1,0);
+    Triangulo brazoIzquierdo4(A_brazoIzquierdo4,B_brazoIzquierdo4,C_brazoIzquierdo4);
+    brazoIzquierdo4.establecerColor(0,1,0);
+
+
+    Punto3D A_brazoDerecho1(200,0,-100);
+    Punto3D B_brazoDerecho1(320,0,-100);
+    Punto3D C_brazoDerecho1(180,-25,-100);
+    Punto3D A_brazoDerecho2(320,0,-100);
+    Punto3D B_brazoDerecho2(320,-25,-100);
+    Punto3D C_brazoDerecho2(180,-25,-100);
+    Triangulo brazoDerecho1(A_brazoDerecho1,B_brazoDerecho1,C_brazoDerecho1);
+    brazoDerecho1.establecerColor(0,1,0);
+    Triangulo brazoDerecho2(A_brazoDerecho2,B_brazoDerecho2,C_brazoDerecho2);
+    brazoDerecho2.establecerColor(0,1,0);
+
+    Punto3D A_brazoDerecho3(320,0,-100);
+    Punto3D B_brazoDerecho3(295,0,-100);
+    Punto3D C_brazoDerecho3(260,130,-100);
+
+    Punto3D A_brazoDerecho4(260,130,-100);
+    Punto3D B_brazoDerecho4(280,130,-100);
+    Punto3D C_brazoDerecho4(320,0,-100);
+
+    Triangulo brazoDerecho3(A_brazoDerecho3,B_brazoDerecho3,C_brazoDerecho3);
+    brazoDerecho3.establecerColor(0,1,0);
+    Triangulo brazoDerecho4(A_brazoDerecho4,B_brazoDerecho4,C_brazoDerecho4);
+    brazoDerecho4.establecerColor(0,1,0);
+
+
+
+
+
 
     escena.push_back(&esfera_cara);
     escena.push_back(&esfera_ojo);
@@ -166,6 +219,16 @@ int main()
     escena.push_back(&piernaDerecha2);
     escena.push_back(&piernaDerecha3);
     escena.push_back(&piernaDerecha4);
+
+    escena.push_back(&brazoIzquierdo1);
+    escena.push_back(&brazoIzquierdo2);
+    escena.push_back(&brazoIzquierdo3);
+    escena.push_back(&brazoIzquierdo4);
+
+    escena.push_back(&brazoDerecho1);
+    escena.push_back(&brazoDerecho2);
+    escena.push_back(&brazoDerecho3);
+    escena.push_back(&brazoDerecho4);
 
     // VIEWPLANE
     int hres = 1000;

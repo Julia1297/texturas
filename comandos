@@ -2,3 +2,4 @@ g++ -o ray main.cpp Utilitarios.cpp Esfera.cpp ObjetoGeometrico.cpp Plano.cpp Pu
 ./ray.exe
 mspaint.exe img.bmp
 
+
