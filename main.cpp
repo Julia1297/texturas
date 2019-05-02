@@ -9,6 +9,7 @@
 #include "LuzPuntual.h"
 #include "Utilitarios.h"
 
+
 using namespace std;
 
 double acotar(double n)
@@ -148,23 +149,24 @@ int main()
     piernaDerecha4.establecerColor(0,1,0);
 
     Punto3D A_brazoIzquierdo1(-200,0,-100);
-    Punto3D B_brazoIzquierdo1(-320,0,-100);
+    Punto3D B_brazoIzquierdo1(-270,-140,-100);
     Punto3D C_brazoIzquierdo1(-180,-25,-100);
-    Punto3D A_brazoIzquierdo2(-320,0,-100);
-    Punto3D B_brazoIzquierdo2(-320,-25,-100);
+
+    Punto3D A_brazoIzquierdo2(-270,-140,-100);
+    Punto3D B_brazoIzquierdo2(-245,-140,-100);
     Punto3D C_brazoIzquierdo2(-180,-25,-100);
     Triangulo brazoIzquierdo1(A_brazoIzquierdo1,B_brazoIzquierdo1,C_brazoIzquierdo1);
     brazoIzquierdo1.establecerColor(0,1,0);
     Triangulo brazoIzquierdo2(A_brazoIzquierdo2,B_brazoIzquierdo2,C_brazoIzquierdo2);
     brazoIzquierdo2.establecerColor(0,1,0);
 
-    Punto3D A_brazoIzquierdo3(-320,0,-100);
-    Punto3D B_brazoIzquierdo3(-295,0,-100);
-    Punto3D C_brazoIzquierdo3(-260,130,-100);
+    Punto3D A_brazoIzquierdo3(-270,-140,-100);
+    Punto3D B_brazoIzquierdo3(-245,-140,-100);
+    Punto3D C_brazoIzquierdo3(-220,-255,-100);
 
-    Punto3D A_brazoIzquierdo4(-260,130,-100);
-    Punto3D B_brazoIzquierdo4(-280,130,-100);
-    Punto3D C_brazoIzquierdo4(-320,0,-100);
+    Punto3D A_brazoIzquierdo4(-270,-140,-100);
+    Punto3D B_brazoIzquierdo4(-220,-255,-100);
+    Punto3D C_brazoIzquierdo4(-245,-255,-100);
 
     Triangulo brazoIzquierdo3(A_brazoIzquierdo3,B_brazoIzquierdo3,C_brazoIzquierdo3);
     brazoIzquierdo3.establecerColor(0,1,0);
@@ -232,7 +234,7 @@ int main()
 
     // VIEWPLANE
     int hres = 1000;
-    int vres = 800;
+    int vres = 1000;
     double s = 1.0;
     ViewPlane vp(hres, vres, s);
 
