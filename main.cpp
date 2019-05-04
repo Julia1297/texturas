@@ -231,38 +231,70 @@ int main()
     pieIzquierdo3.establecerColor(0,1,0);
 
     //Pie derecho
-    // Punto3D pieDerecho_dedo1(75, -390, -100);
-    // Esfera esfera_pieDerecho_dedo1(pieDerecho_dedo1, 8);
-    // esfera_pieDerecho_dedo1.establecerColor(0, 1, 0);
+    Punto3D pieDerecho_dedo1(65, -390, -100);
+    Esfera esfera_pieDerecho_dedo1(pieDerecho_dedo1, 8);
+    esfera_pieDerecho_dedo1.establecerColor(0, 1, 0);
 
-    Punto3D pieDerecho_dedo2(90, -385, -100);
+    Punto3D pieDerecho_dedo2(80, -385, -100);
     Esfera esfera_pieDerecho_dedo2(pieDerecho_dedo2, 10);
     esfera_pieDerecho_dedo2.establecerColor(0, 1, 0);
 
-    Punto3D pieDerecho_dedo3(100, -380, -100);
+    Punto3D pieDerecho_dedo3(90, -380, -100);
     Esfera esfera_pieDerecho_dedo3(pieDerecho_dedo3, 8);
     esfera_pieDerecho_dedo3.establecerColor(0, 1, 0);
 
-    Punto3D A_pieDerecho1(100,-380,-90);
-    Punto3D B_pieDerecho1(90, -385, -100);
+    Punto3D A_pieDerecho1(90,-380,-90);
+    Punto3D B_pieDerecho1(80, -385, -100);
     Punto3D C_pieDerecho1(75,-370,-100);
 
     Punto3D A_pieDerecho2(75,-370,-100);
     Punto3D B_pieDerecho2(50,-370,-100);
-    Punto3D C_pieDerecho2(90, -385, -100);
+    Punto3D C_pieDerecho2(80, -385, -100);
 
-    Punto3D A_pieDerecho3(90, -385, -100);
-    Punto3D B_pieDerecho3(75, -390, -100);
+    Punto3D A_pieDerecho3(80, -385, -100);
+    Punto3D B_pieDerecho3(65, -390, -100);
     Punto3D C_pieDerecho3(50,-370,-100);
 
     Triangulo pieDerecho1(A_pieDerecho1,B_pieDerecho1,C_pieDerecho1);
     pieDerecho1.establecerColor(0,1,0);
     Triangulo pieDerecho2(A_pieDerecho2,B_pieDerecho2,C_pieDerecho2);
     pieDerecho2.establecerColor(0,1,0);
-    //Triangulo pieDerecho3(A_pieDerecho3,B_pieDerecho3,C_pieDerecho3);
-    //pieDerecho3.establecerColor(0,1,0);
+    Triangulo pieDerecho3(A_pieDerecho3,B_pieDerecho3,C_pieDerecho3);
+    pieDerecho3.establecerColor(0,1,0);
 
+    //Mano Izquierda
+    Punto3D A_manoIzquierda1(-170,-255,-100);
+    Punto3D B_manoIzquierda1(-195,-255,-100);
+    Punto3D C_manoIzquierda1(-180, -280, -100);
 
+    Punto3D A_manoIzquierda2(-195, -255, -100);
+    Punto3D B_manoIzquierda2(-180, -280, -100);
+    Punto3D C_manoIzquierda2(-205,-280,-100);
+
+    Punto3D A_manoIzquierda3(-170, -255, -100);
+    Punto3D B_manoIzquierda3(-155, -275, -100);
+    Punto3D C_manoIzquierda3(-180,-270,-100);
+
+    Punto3D A_manoIzquierda4(-205,-280,-100);
+    Punto3D B_manoIzquierda4(-180, -280, -100);
+    Punto3D C_manoIzquierda4(-195, -295, -100);
+
+    Punto3D A_manoIzquierda5(-180, -280, -100);
+    Punto3D B_manoIzquierda5(-170,-295,-100);
+    Punto3D C_manoIzquierda5(-195, -295, -100);
+    
+    Triangulo manoIzquierda1(A_manoIzquierda1,B_manoIzquierda1,C_manoIzquierda1);
+    manoIzquierda1.establecerColor(0,1,1);
+    Triangulo manoIzquierda2(A_manoIzquierda2,B_manoIzquierda2,C_manoIzquierda2);
+    manoIzquierda2.establecerColor(0,1,1);
+    Triangulo manoIzquierda3(A_manoIzquierda3,B_manoIzquierda3,C_manoIzquierda3);
+    manoIzquierda3.establecerColor(0,1,1);
+    Triangulo manoIzquierda4(A_manoIzquierda4,B_manoIzquierda4,C_manoIzquierda4);
+    manoIzquierda4.establecerColor(0,1,1);
+    Triangulo manoIzquierda5(A_manoIzquierda5,B_manoIzquierda5,C_manoIzquierda5);
+    manoIzquierda5.establecerColor(0,1,1);
+    
+    
 
     escena.push_back(&esfera_cara);
     escena.push_back(&esfera_ojo);
@@ -301,13 +333,20 @@ int main()
     escena.push_back(&pieIzquierdo2);
     escena.push_back(&pieIzquierdo3);
 
-    //escena.push_back(&esfera_pieDerecho_dedo1);
+    escena.push_back(&esfera_pieDerecho_dedo1);
     escena.push_back(&esfera_pieDerecho_dedo2);
     escena.push_back(&esfera_pieDerecho_dedo3);
 
     escena.push_back(&pieDerecho1);
     escena.push_back(&pieDerecho2);
-    // escena.push_back(&pieDerecho3);
+    escena.push_back(&pieDerecho3);
+
+    escena.push_back(&manoIzquierda1);
+    escena.push_back(&manoIzquierda2);
+    escena.push_back(&manoIzquierda3);
+    escena.push_back(&manoIzquierda4);
+    escena.push_back(&manoIzquierda5);
+
     // VIEWPLANE
     int hres = 1000;
     int vres = 1000;
