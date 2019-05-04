@@ -57,8 +57,8 @@ ColorRGB obtenerColorPixel(const Rayo &r, vector<ObjetoGeometrico *> objetos, Lu
 int main()
 {
 
-    LuzPuntual luz(0.6, 0.3, 0.6,-350,-250,-80);
-    LuzPuntual luz_ambiente(0.4, 0.7, 0.4, 0.0, 0.0, 0.0);
+    LuzPuntual luz(0.5, 0.5, 0.5,-350,-250,-80);
+    LuzPuntual luz_ambiente(0.5, 0.5, 0.5, 0.0, 0.0, 0.0);
     vector<ObjetoGeometrico *> escena;
 
     // ESCENA------------------------------------------------------------------
@@ -330,18 +330,18 @@ int main()
 
 
 
-    Punto3D A_manoIzquierda_garra1(-180, -295,-80);
-    Punto3D B_manoIzquierda_garra1(-170, -295,-80);
-    Punto3D C_manoIzquierda_garra1(-155, -315, -80);
+    Punto3D A_manoIzquierda_garra1(-151, -313,-80);
+    Punto3D B_manoIzquierda_garra1(-160, -313,-80);
+    Punto3D C_manoIzquierda_garra1(-149, -319,-80);
 
-    Punto3D A_manoIzquierda_garra2(-180, -285,-100);
-    Punto3D B_manoIzquierda_garra2(-170, -285,-100);
-    Punto3D C_manoIzquierda_garra2(-155, -315, -100);
+    Punto3D A_manoIzquierda_garra2(-155, -300,-80);
+    Punto3D B_manoIzquierda_garra2(-150, -300,-80);
+    Punto3D C_manoIzquierda_garra2(-153, -308,-80);
 
     Triangulo manoIzquierda_garra1(A_manoIzquierda_garra1,B_manoIzquierda_garra1,C_manoIzquierda_garra1);
-    manoIzquierda_garra1.establecerColor(1,1,1);
+    manoIzquierda_garra1.establecerColor(1,0,0);
     Triangulo manoIzquierda_garra2(A_manoIzquierda_garra2,B_manoIzquierda_garra2,C_manoIzquierda_garra2);
-    manoIzquierda_garra2.establecerColor(1,1,1);
+    manoIzquierda_garra2.establecerColor(1,0,0);
 
     escena.push_back(&esfera_cara);
     escena.push_back(&esfera_ojo);
@@ -396,12 +396,13 @@ int main()
 
     escena.push_back(&manoIzquierda_dedo1);
     escena.push_back(&manoIzquierda_dedo3);
-    //escena.push_back(&manoIzquierda_garra1);
-    //escena.push_back(&manoIzquierda_garra2);
+  
     escena.push_back(&manoIzquierda_dedo2);
     escena.push_back(&manoIzquierda_dedo4);
     escena.push_back(&manoIzquierda_dedo5);
 
+    escena.push_back(&manoIzquierda_garra1);
+    escena.push_back(&manoIzquierda_garra2);
 
     // VIEWPLANE
     int hres = 1000;
