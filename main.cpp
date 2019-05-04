@@ -280,7 +280,7 @@ int main()
     Punto3D C_manoIzquierda4(-195, -295, -100);
 
     Punto3D A_manoIzquierda5(-180, -280, -100);
-    Punto3D B_manoIzquierda5(-170,-295,-100);
+    Punto3D B_manoIzquierda5(-165,-295,-100);
     Punto3D C_manoIzquierda5(-195, -295, -100);
     
     Triangulo manoIzquierda1(A_manoIzquierda1,B_manoIzquierda1,C_manoIzquierda1);
@@ -294,7 +294,54 @@ int main()
     Triangulo manoIzquierda5(A_manoIzquierda5,B_manoIzquierda5,C_manoIzquierda5);
     manoIzquierda5.establecerColor(0,1,1);
     
-    
+    //Dedos de mano izquierda
+    Punto3D A_manoIzquierda_dedo1(-175, -295,-100);
+    Punto3D B_manoIzquierda_dedo1(-165, -295,-100);
+    Punto3D C_manoIzquierda_dedo1(-150, -315, -100);
+
+    Punto3D A_manoIzquierda_dedo2(-175, -295, -100);
+    Punto3D B_manoIzquierda_dedo2(-150, -315, -100);
+    Punto3D C_manoIzquierda_dedo2(-157, -315,-100);
+
+    Punto3D A_manoIzquierda_dedo3(-195, -295, -100);
+    Punto3D B_manoIzquierda_dedo3(-180, -295,-100);
+    Punto3D C_manoIzquierda_dedo3(-160, -310, -100);
+
+
+    Punto3D A_manoIzquierda_dedo4(-165, -273, -100);
+    Punto3D B_manoIzquierda_dedo4(-155, -275, -100);
+    Punto3D C_manoIzquierda_dedo4(-150, -300,-100);
+
+    Punto3D A_manoIzquierda_dedo5(-165, -273, -100);
+    Punto3D B_manoIzquierda_dedo5(-150, -300,-100);
+    Punto3D C_manoIzquierda_dedo5(-155, -300,-100);
+
+    Triangulo manoIzquierda_dedo1(A_manoIzquierda_dedo1,B_manoIzquierda_dedo1,C_manoIzquierda_dedo1);
+    manoIzquierda_dedo1.establecerColor(1,1,0);
+    Triangulo manoIzquierda_dedo2(A_manoIzquierda_dedo2,B_manoIzquierda_dedo2,C_manoIzquierda_dedo2);
+    manoIzquierda_dedo2.establecerColor(1,1,0);
+    Triangulo manoIzquierda_dedo3(A_manoIzquierda_dedo3,B_manoIzquierda_dedo3,C_manoIzquierda_dedo3);
+    manoIzquierda_dedo3.establecerColor(1,1,0);
+
+    Triangulo manoIzquierda_dedo4(A_manoIzquierda_dedo4,B_manoIzquierda_dedo4,C_manoIzquierda_dedo4);
+    manoIzquierda_dedo4.establecerColor(1,1,0);
+    Triangulo manoIzquierda_dedo5(A_manoIzquierda_dedo5,B_manoIzquierda_dedo5,C_manoIzquierda_dedo5);
+    manoIzquierda_dedo5.establecerColor(1,1,0);
+
+
+
+    Punto3D A_manoIzquierda_garra1(-180, -295,-80);
+    Punto3D B_manoIzquierda_garra1(-170, -295,-80);
+    Punto3D C_manoIzquierda_garra1(-155, -315, -80);
+
+    Punto3D A_manoIzquierda_garra2(-180, -285,-100);
+    Punto3D B_manoIzquierda_garra2(-170, -285,-100);
+    Punto3D C_manoIzquierda_garra2(-155, -315, -100);
+
+    Triangulo manoIzquierda_garra1(A_manoIzquierda_garra1,B_manoIzquierda_garra1,C_manoIzquierda_garra1);
+    manoIzquierda_garra1.establecerColor(1,1,1);
+    Triangulo manoIzquierda_garra2(A_manoIzquierda_garra2,B_manoIzquierda_garra2,C_manoIzquierda_garra2);
+    manoIzquierda_garra2.establecerColor(1,1,1);
 
     escena.push_back(&esfera_cara);
     escena.push_back(&esfera_ojo);
@@ -346,6 +393,15 @@ int main()
     escena.push_back(&manoIzquierda3);
     escena.push_back(&manoIzquierda4);
     escena.push_back(&manoIzquierda5);
+
+    escena.push_back(&manoIzquierda_dedo1);
+    escena.push_back(&manoIzquierda_dedo3);
+    //escena.push_back(&manoIzquierda_garra1);
+    //escena.push_back(&manoIzquierda_garra2);
+    escena.push_back(&manoIzquierda_dedo2);
+    escena.push_back(&manoIzquierda_dedo4);
+    escena.push_back(&manoIzquierda_dedo5);
+
 
     // VIEWPLANE
     int hres = 1000;
