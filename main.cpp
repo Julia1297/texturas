@@ -57,8 +57,8 @@ ColorRGB obtenerColorPixel(const Rayo &r, vector<ObjetoGeometrico *> objetos, Lu
 int main()
 {
 
-    LuzPuntual luz(0.2, 0.3, 0.6,-350,-250,-80);
-    LuzPuntual luz_ambiente(0.8, 0.7, 0.4, 0.0, 0.0, 0.0);
+    LuzPuntual luz(0.6, 0.3, 0.6,-350,-250,-80);
+    LuzPuntual luz_ambiente(0.4, 0.7, 0.4, 0.0, 0.0, 0.0);
     vector<ObjetoGeometrico *> escena;
 
     // ESCENA------------------------------------------------------------------
@@ -137,11 +137,11 @@ int main()
 
     Punto3D A_piernaDerecha3(100,-260,-100);
     Punto3D B_piernaDerecha3(70,-260,-100);
-    Punto3D C_piernaDerecha3(50,-360,-100);
+    Punto3D C_piernaDerecha3(50,-370,-100);
 
     Punto3D A_piernaDerecha4(100,-260,-100);
-    Punto3D B_piernaDerecha4(50,-360,-100);
-    Punto3D C_piernaDerecha4(75,-360,-100);
+    Punto3D B_piernaDerecha4(50,-370,-100);
+    Punto3D C_piernaDerecha4(75,-370,-100);
 
     Triangulo piernaDerecha3(A_piernaDerecha3,B_piernaDerecha3,C_piernaDerecha3);
     piernaDerecha3.establecerColor(0,1,0);
@@ -198,28 +198,30 @@ int main()
     Triangulo brazoDerecho4(A_brazoDerecho4,B_brazoDerecho4,C_brazoDerecho4);
     brazoDerecho4.establecerColor(0,1,0);
 
-    Punto3D pieIzquierdo_dedo1(-75, -400, -100);
+    //Pie izquierdo
+
+    Punto3D pieIzquierdo_dedo1(-90, -390, -100);
     Esfera esfera_pieIzquierdo_dedo1(pieIzquierdo_dedo1, 8);
     esfera_pieIzquierdo_dedo1.establecerColor(0, 1, 0);
 
-    Punto3D pieIzquierdo_dedo2(-90, -395, -100);
+    Punto3D pieIzquierdo_dedo2(-105, -385, -100);
     Esfera esfera_pieIzquierdo_dedo2(pieIzquierdo_dedo2, 10);
     esfera_pieIzquierdo_dedo2.establecerColor(0, 1, 0);
 
-    Punto3D pieIzquierdo_dedo3(-100, -390, -100);
+    Punto3D pieIzquierdo_dedo3(-115, -380, -100);
     Esfera esfera_pieIzquierdo_dedo3(pieIzquierdo_dedo3, 8);
     esfera_pieIzquierdo_dedo3.establecerColor(0, 1, 0);
 
-    Punto3D A_pieIzquierdo1(-100,-390,-90);
-    Punto3D B_pieIzquierdo1(-90, -395, -100);
+    Punto3D A_pieIzquierdo1(-120,-375,-90);
+    Punto3D B_pieIzquierdo1(-105, -385, -100);
     Punto3D C_pieIzquierdo1(-75,-370,-100);
 
     Punto3D A_pieIzquierdo2(-75,-370,-100);
     Punto3D B_pieIzquierdo2(-50,-370,-100);
-    Punto3D C_pieIzquierdo2(-90, -395, -100);
+    Punto3D C_pieIzquierdo2(-105, -385, -100);
 
-    Punto3D A_pieIzquierdo3(-90, -395, -100);
-    Punto3D B_pieIzquierdo3(-75, -400, -100);
+    Punto3D A_pieIzquierdo3(-105, -385, -100);
+    Punto3D B_pieIzquierdo3(-85, -395, -100);
     Punto3D C_pieIzquierdo3(-50,-370,-100);
 
     Triangulo pieIzquierdo1(A_pieIzquierdo1,B_pieIzquierdo1,C_pieIzquierdo1);
@@ -228,6 +230,39 @@ int main()
     pieIzquierdo2.establecerColor(0,1,0);
     Triangulo pieIzquierdo3(A_pieIzquierdo3,B_pieIzquierdo3,C_pieIzquierdo3);
     pieIzquierdo3.establecerColor(0,1,0);
+
+    //Pie derecho
+    // Punto3D pieDerecho_dedo1(75, -390, -100);
+    // Esfera esfera_pieDerecho_dedo1(pieDerecho_dedo1, 8);
+    // esfera_pieDerecho_dedo1.establecerColor(0, 1, 0);
+
+    Punto3D pieDerecho_dedo2(90, -385, -100);
+    Esfera esfera_pieDerecho_dedo2(pieDerecho_dedo2, 10);
+    esfera_pieDerecho_dedo2.establecerColor(0, 1, 0);
+
+    Punto3D pieDerecho_dedo3(100, -380, -100);
+    Esfera esfera_pieDerecho_dedo3(pieDerecho_dedo3, 8);
+    esfera_pieDerecho_dedo3.establecerColor(0, 1, 0);
+
+    Punto3D A_pieDerecho1(100,-380,-90);
+    Punto3D B_pieDerecho1(90, -385, -100);
+    Punto3D C_pieDerecho1(75,-370,-100);
+
+    Punto3D A_pieDerecho2(75,-370,-100);
+    Punto3D B_pieDerecho2(50,-370,-100);
+    Punto3D C_pieDerecho2(90, -385, -100);
+
+    Punto3D A_pieDerecho3(90, -385, -100);
+    Punto3D B_pieDerecho3(75, -390, -100);
+    Punto3D C_pieDerecho3(50,-370,-100);
+
+    Triangulo pieDerecho1(A_pieDerecho1,B_pieDerecho1,C_pieDerecho1);
+    pieDerecho1.establecerColor(0,1,0);
+    Triangulo pieDerecho2(A_pieDerecho2,B_pieDerecho2,C_pieDerecho2);
+    pieDerecho2.establecerColor(0,1,0);
+    //Triangulo pieDerecho3(A_pieDerecho3,B_pieDerecho3,C_pieDerecho3);
+    //pieDerecho3.establecerColor(0,1,0);
+
 
 
     escena.push_back(&esfera_cara);
@@ -266,6 +301,14 @@ int main()
     escena.push_back(&pieIzquierdo1);
     escena.push_back(&pieIzquierdo2);
     escena.push_back(&pieIzquierdo3);
+
+    //escena.push_back(&esfera_pieDerecho_dedo1);
+    escena.push_back(&esfera_pieDerecho_dedo2);
+    escena.push_back(&esfera_pieDerecho_dedo3);
+
+    escena.push_back(&pieDerecho1);
+    escena.push_back(&pieDerecho2);
+    // escena.push_back(&pieDerecho3);
     // VIEWPLANE
     int hres = 1000;
     int vres = 1000;
