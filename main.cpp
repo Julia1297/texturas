@@ -149,24 +149,23 @@ int main()
     piernaDerecha4.establecerColor(0,1,0);
 
     Punto3D A_brazoIzquierdo1(-200,0,-100);
-    Punto3D B_brazoIzquierdo1(-270,-140,-100);
+    Punto3D B_brazoIzquierdo1(-220,-140,-100);
     Punto3D C_brazoIzquierdo1(-180,-25,-100);
-
-    Punto3D A_brazoIzquierdo2(-270,-140,-100);
-    Punto3D B_brazoIzquierdo2(-245,-140,-100);
+    Punto3D A_brazoIzquierdo2(-220,-140,-100);
+    Punto3D B_brazoIzquierdo2(-195,-140,-100);
     Punto3D C_brazoIzquierdo2(-180,-25,-100);
+
     Triangulo brazoIzquierdo1(A_brazoIzquierdo1,B_brazoIzquierdo1,C_brazoIzquierdo1);
     brazoIzquierdo1.establecerColor(0,1,0);
     Triangulo brazoIzquierdo2(A_brazoIzquierdo2,B_brazoIzquierdo2,C_brazoIzquierdo2);
     brazoIzquierdo2.establecerColor(0,1,0);
 
-    Punto3D A_brazoIzquierdo3(-270,-140,-100);
-    Punto3D B_brazoIzquierdo3(-245,-140,-100);
-    Punto3D C_brazoIzquierdo3(-220,-255,-100);
-
-    Punto3D A_brazoIzquierdo4(-270,-140,-100);
-    Punto3D B_brazoIzquierdo4(-220,-255,-100);
-    Punto3D C_brazoIzquierdo4(-245,-255,-100);
+    Punto3D A_brazoIzquierdo3(-220,-140,-100);
+    Punto3D B_brazoIzquierdo3(-195,-140,-100);
+    Punto3D C_brazoIzquierdo3(-170,-255,-100);
+    Punto3D A_brazoIzquierdo4(-220,-140,-100);
+    Punto3D B_brazoIzquierdo4(-170,-255,-100);
+    Punto3D C_brazoIzquierdo4(-195,-255,-100);
 
     Triangulo brazoIzquierdo3(A_brazoIzquierdo3,B_brazoIzquierdo3,C_brazoIzquierdo3);
     brazoIzquierdo3.establecerColor(0,1,0);
@@ -175,23 +174,23 @@ int main()
 
 
     Punto3D A_brazoDerecho1(200,0,-100);
-    Punto3D B_brazoDerecho1(320,0,-100);
+    Punto3D B_brazoDerecho1(220,-140,-100);
     Punto3D C_brazoDerecho1(180,-25,-100);
-    Punto3D A_brazoDerecho2(320,0,-100);
-    Punto3D B_brazoDerecho2(320,-25,-100);
+    Punto3D A_brazoDerecho2(220,-140,-100);
+    Punto3D B_brazoDerecho2(195,-140,-100);
     Punto3D C_brazoDerecho2(180,-25,-100);
+
     Triangulo brazoDerecho1(A_brazoDerecho1,B_brazoDerecho1,C_brazoDerecho1);
     brazoDerecho1.establecerColor(0,1,0);
     Triangulo brazoDerecho2(A_brazoDerecho2,B_brazoDerecho2,C_brazoDerecho2);
     brazoDerecho2.establecerColor(0,1,0);
 
-    Punto3D A_brazoDerecho3(320,0,-100);
-    Punto3D B_brazoDerecho3(295,0,-100);
-    Punto3D C_brazoDerecho3(260,130,-100);
-
-    Punto3D A_brazoDerecho4(260,130,-100);
-    Punto3D B_brazoDerecho4(280,130,-100);
-    Punto3D C_brazoDerecho4(320,0,-100);
+    Punto3D A_brazoDerecho3(220,-140,-100);
+    Punto3D B_brazoDerecho3(195,-140,-100);
+    Punto3D C_brazoDerecho3(170,-255,-100);
+    Punto3D A_brazoDerecho4(220,-140,-100);
+    Punto3D B_brazoDerecho4(170,-255,-100);
+    Punto3D C_brazoDerecho4(195,-255,-100);
 
     Triangulo brazoDerecho3(A_brazoDerecho3,B_brazoDerecho3,C_brazoDerecho3);
     brazoDerecho3.establecerColor(0,1,0);
