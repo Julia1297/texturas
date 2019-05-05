@@ -57,20 +57,20 @@ ColorRGB obtenerColorPixel(const Rayo &r, vector<ObjetoGeometrico *> objetos, Lu
 int main()
 {
 
-    LuzPuntual luz(0.5, 0.5, 0.5,-350,-250,-80);
-    LuzPuntual luz_ambiente(0.5, 0.5, 0.5, 0.0, 0.0, 0.0);
+    LuzPuntual luz(0.5, 0.5, 0.9,0,150,-550);
+    LuzPuntual luz_ambiente(0.5, 0.5, 0.1, 0,0,0);
     vector<ObjetoGeometrico *> escena;
 
     // ESCENA------------------------------------------------------------------
-    Punto3D cara(0, 0, -100);
+    Punto3D cara(0, 0, -30);
     Esfera esfera_cara(cara, 200);
     esfera_cara.establecerColor(0, 1, 0);
 
-    Punto3D ojo(0, 50, -50);
+    Punto3D ojo(0, 50, -20);
     Esfera esfera_ojo(ojo, 100);
     esfera_ojo.establecerColor(1, 1, 1);
     
-    Punto3D pupila(0, 50, -25);
+    Punto3D pupila(0, 50, -0);
     Esfera esfera_pupila(pupila, 40);
     esfera_pupila.establecerColor(0, 1, 1);
 
