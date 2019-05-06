@@ -310,7 +310,26 @@ int main()
     Triangulo pieDerecho3(A_pieDerecho3,B_pieDerecho3,C_pieDerecho3);
     pieDerecho3.establecerColor(0,1,0);
 
+   //Garras pie derecho
 
+    Punto3D A_pieDerecho_garra1(77, -395,-80);
+    Punto3D B_pieDerecho_garra1(84, -389, -80);
+    Punto3D C_pieDerecho_garra1(87, -399,-80);
+
+    Punto3D A_pieDerecho_garra2(90, -389,-80);
+    Punto3D B_pieDerecho_garra2(97, -384, -80);
+    Punto3D C_pieDerecho_garra2(103, -391,-80);
+
+    Punto3D A_pieDerecho_garra3(104, -381,-80);
+    Punto3D B_pieDerecho_garra3(110, -377, -80);
+    Punto3D C_pieDerecho_garra3(115, -386,-80);
+
+    Triangulo pieDerecho_garra1(A_pieDerecho_garra1,B_pieDerecho_garra1,C_pieDerecho_garra1);
+    pieDerecho_garra1.establecerColor(0.7,0.7,0.7);
+    Triangulo pieDerecho_garra2(A_pieDerecho_garra2,B_pieDerecho_garra2,C_pieDerecho_garra2);
+    pieDerecho_garra2.establecerColor(0.7,0.7,0.7);
+    Triangulo pieDerecho_garra3(A_pieDerecho_garra3,B_pieDerecho_garra3,C_pieDerecho_garra3);
+    pieDerecho_garra3.establecerColor(0.7,0.7,0.7);
 
     //Mano Izquierda
     Punto3D A_manoIzquierda1(-170,-255,-100);
@@ -554,6 +573,9 @@ int main()
     escena.push_back(&pieIzquierda_garra2);
     escena.push_back(&pieIzquierda_garra3);
 
+    escena.push_back(&pieDerecho_garra1);
+    escena.push_back(&pieDerecho_garra2);
+    escena.push_back(&pieDerecho_garra3);
     // VIEWPLANE
     int hres = 1000;
     int vres = 1000;
