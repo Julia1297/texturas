@@ -44,10 +44,34 @@ ColorRGB obtenerColorPixel(const Rayo &r, vector<ObjetoGeometrico *> objetos, Lu
         {
             if (objetos[i]->hayImpacto(r, t, n, q) && t < tmin)
             {
-                color.r = objetos[i]->obtenerColor().r * luz_ambiente.color.r + objetos[i]->obtenerColor().r * luz.color.r * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().r * luz.color.r * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
-                color.g = objetos[i]->obtenerColor().g * luz_ambiente.color.g + objetos[i]->obtenerColor().g * luz.color.g * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().g * luz.color.g * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
-                color.b = objetos[i]->obtenerColor().b * luz_ambiente.color.b + objetos[i]->obtenerColor().b * luz.color.b * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().b * luz.color.b * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
+                // color.r = objetos[i]->obtenerColor().r * luz_ambiente.color.r + objetos[i]->obtenerColor().r * luz.color.r * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().r * luz.color.r * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
+                // color.g = objetos[i]->obtenerColor().g * luz_ambiente.color.g + objetos[i]->obtenerColor().g * luz.color.g * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().g * luz.color.g * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
+                // color.b = objetos[i]->obtenerColor().b * luz_ambiente.color.b + objetos[i]->obtenerColor().b * luz.color.b * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().b * luz.color.b * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
+                // tmin = t;
+                color.r = objetos[i]->obtenerColor().r * luz_ambiente.color.r + objetos[i]->obtenerColor().r * luz.color.r * std::max(0.0, n * (luz.posicion - q).hat() ) + objetos[i]->obtenerColor().r * luz.color.r * pow(std::max(0.0, n * ((-1)*r.d + (luz.posicion - q).hat()).hat() ),100);
+                color.g = objetos[i]->obtenerColor().g * luz_ambiente.color.g + objetos[i]->obtenerColor().g * luz.color.g * std::max(0.0, n * (luz.posicion - q).hat() ) + objetos[i]->obtenerColor().g * luz.color.g * pow(std::max(0.0, n * ((-1)*r.d + (luz.posicion - q).hat()).hat() ),100);
+                color.b = objetos[i]->obtenerColor().b * luz_ambiente.color.b + objetos[i]->obtenerColor().b * luz.color.b * std::max(0.0, n * (luz.posicion - q).hat() ) + objetos[i]->obtenerColor().b * luz.color.b * pow(std::max(0.0, n * ((-1)*r.d + (luz.posicion - q).hat()).hat() ),100);
+
+                
+                
+
+
+                // double t_sombra;
+                // double t_min_sombra = 2000000;
+                // Vector3D n_sombra;
+                // Punto3D q_sombra;
+                // Rayo rayo_sombra(q, (luz.posicion - q)) ;
+                // for (int j = 0; j < objetos.size(); j++) {
+                //     if ((objetos[j]->hayImpacto(rayo_sombra, t_sombra, n_sombra, q_sombra) && t_sombra < t_min_sombra)) {
+                //         color.r = objetos[i]->obtenerColor().r * luz_ambiente.color.r;
+                //         color.g = objetos[i]->obtenerColor().g * luz_ambiente.color.g;
+                //         color.b = objetos[i]->obtenerColor().b * luz_ambiente.color.b;
+                //         t_min_sombra = t_sombra;
+                //     }
+                // }
                 tmin = t;
+
+               
             }
         }
         return color;
@@ -57,8 +81,9 @@ ColorRGB obtenerColorPixel(const Rayo &r, vector<ObjetoGeometrico *> objetos, Lu
 int main()
 {
 
-    LuzPuntual luz(0.5, 0.5, 0.8,0,130,-550);
-    LuzPuntual luz_ambiente(0.5, 0.5, 0.2, 0,0,100);
+
+    LuzPuntual luz(0.5, 0.5, 0.9,0,130,-550);
+    LuzPuntual luz_ambiente(0.5, 0.5, 0.1, 0,0,100);
     vector<ObjetoGeometrico *> escena;
 
     // ESCENA------------------------------------------------------------------
@@ -233,29 +258,49 @@ int main()
     Triangulo pieIzquierdo3(A_pieIzquierdo3,B_pieIzquierdo3,C_pieIzquierdo3);
     pieIzquierdo3.establecerColor(0,1,0);
 
+    //Garras pie izquierdo
+
+    Punto3D A_pieIzquierda_garra1(-94, -388, -80);
+    Punto3D B_pieIzquierda_garra1(-87, -394,-80);
+    Punto3D C_pieIzquierda_garra1(-97, -398,-80);
+
+    Punto3D A_pieIzquierda_garra2(-107, -383, -80);
+    Punto3D B_pieIzquierda_garra2(-100, -388,-80);
+    Punto3D C_pieIzquierda_garra2(-113, -392,-80);
+
+    Punto3D A_pieIzquierda_garra3(-120, -376, -80);
+    Punto3D B_pieIzquierda_garra3(-114, -380,-80);
+    Punto3D C_pieIzquierda_garra3(-125, -385,-80);
+
+    Triangulo pieIzquierda_garra1(A_pieIzquierda_garra1,B_pieIzquierda_garra1,C_pieIzquierda_garra1);
+    pieIzquierda_garra1.establecerColor(0.7,0.7,0.7);
+    Triangulo pieIzquierda_garra2(A_pieIzquierda_garra2,B_pieIzquierda_garra2,C_pieIzquierda_garra2);
+    pieIzquierda_garra2.establecerColor(0.7,0.7,0.7);
+    Triangulo pieIzquierda_garra3(A_pieIzquierda_garra3,B_pieIzquierda_garra3,C_pieIzquierda_garra3);
+    pieIzquierda_garra3.establecerColor(0.7,0.7,0.7);
     //Pie derecho
-    Punto3D pieDerecho_dedo1(65, -390, -100);
+    Punto3D pieDerecho_dedo1(80, -390, -100);
     Esfera esfera_pieDerecho_dedo1(pieDerecho_dedo1, 8);
     esfera_pieDerecho_dedo1.establecerColor(0, 1, 0);
 
-    Punto3D pieDerecho_dedo2(80, -385, -100);
+    Punto3D pieDerecho_dedo2(95, -385, -100);
     Esfera esfera_pieDerecho_dedo2(pieDerecho_dedo2, 10);
     esfera_pieDerecho_dedo2.establecerColor(0, 1, 0);
 
-    Punto3D pieDerecho_dedo3(90, -380, -100);
+    Punto3D pieDerecho_dedo3(105, -380, -100);
     Esfera esfera_pieDerecho_dedo3(pieDerecho_dedo3, 8);
     esfera_pieDerecho_dedo3.establecerColor(0, 1, 0);
 
-    Punto3D A_pieDerecho1(80, -385, -100);
-    Punto3D B_pieDerecho1(90,-380,-90);
+    Punto3D A_pieDerecho1(95, -385, -100);
+    Punto3D B_pieDerecho1(105,-380,-90);
     Punto3D C_pieDerecho1(75,-370,-100);
 
     Punto3D A_pieDerecho2(75,-370,-100);
     Punto3D B_pieDerecho2(50,-370,-100);
-    Punto3D C_pieDerecho2(80, -385, -100);
+    Punto3D C_pieDerecho2(95, -385, -100);
 
-    Punto3D A_pieDerecho3(65, -390, -100);
-    Punto3D B_pieDerecho3(80, -385, -100);
+    Punto3D A_pieDerecho3(80, -390, -100);
+    Punto3D B_pieDerecho3(95, -385, -100);
     Punto3D C_pieDerecho3(50,-370,-100);
 
     Triangulo pieDerecho1(A_pieDerecho1,B_pieDerecho1,C_pieDerecho1);
@@ -264,6 +309,8 @@ int main()
     pieDerecho2.establecerColor(0,1,0);
     Triangulo pieDerecho3(A_pieDerecho3,B_pieDerecho3,C_pieDerecho3);
     pieDerecho3.establecerColor(0,1,0);
+
+
 
     //Mano Izquierda
     Punto3D A_manoIzquierda1(-170,-255,-100);
@@ -502,6 +549,10 @@ int main()
 
     escena.push_back(&manoDerecha_garra1);
     escena.push_back(&manoDerecha_garra2);
+
+    escena.push_back(&pieIzquierda_garra1);
+    escena.push_back(&pieIzquierda_garra2);
+    escena.push_back(&pieIzquierda_garra3);
 
     // VIEWPLANE
     int hres = 1000;

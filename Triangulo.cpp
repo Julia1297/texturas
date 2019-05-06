@@ -41,6 +41,7 @@ bool Triangulo::hayImpacto(const Rayo& r, double& tmin, Vector3D& n, Punto3D& q)
     {
         return false;
     }
+     //        0.00000001
     if ( t < 0.0000001)
     {
         return false;

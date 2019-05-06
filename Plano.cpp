@@ -4,17 +4,21 @@ Plano::Plano(Punto3D v_p, Vector3D v_n)
     p = v_p;
     n = v_n;
 }
-bool Plano::hayImpacto(const Rayo& _rayo, double& _t, Vector3D& _n, Punto3D& _q) const
+bool Plano::hayImpacto(const Rayo& _rayo, double& _t, Vector3D& _n, Punto3D& _q  ) const
 {
     double t = ((p - _rayo.o)*n) / (_rayo.d * n);
+    if( t > 0.0000001 ) 
+    {
         _q = _rayo.o + t*_rayo.d;
+        _n = n;
+        _t = t;
 
-    if((_q.x < -100 || _q.x >100) || (_q.y < -200 || _q.y >-100))
-            return false;       
-    _n = n;
-    _t = t;    
-    return true;
- 
+        return true;
+    }
+    else
+    {
+        return false;   
+    }    
 }
 void Plano::establecerColor(double v_r, double v_g, double v_b)
 {
