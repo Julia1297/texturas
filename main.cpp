@@ -492,6 +492,38 @@ int main()
     Triangulo manoDerecha_garra2(A_manoDerecha_garra2,B_manoDerecha_garra2,C_manoDerecha_garra2);
     manoDerecha_garra2.establecerColor(0.7,0.7,0.7);
 
+
+    //Boca
+    Punto3D boca(0, -120, -30);
+    Esfera esfera_boca(boca, 55);
+    esfera_boca.establecerColor(0,0,0 );
+
+    //Labio inferior
+    Punto3D A_labioInferior1(-55,-120,30);
+    Punto3D B_labioInferior1(-30, -150,30);
+    Punto3D C_labioInferior1(-55, -150,30);
+
+    Punto3D A_labioInferior2(150, -300,-20);
+    Punto3D B_labioInferior2(155, -300,-20);
+    Punto3D C_labioInferior2(153, -308,-20);
+
+    Punto3D A_labioInferior3(150, -300,-80);
+    Punto3D B_labioInferior3(155, -300,-80);
+    Punto3D C_labioInferior3(153, -308,-80);
+
+    Punto3D A_labioInferior4(150, -300,-80);
+    Punto3D B_labioInferior4(155, -300,-80);
+    Punto3D C_labioInferior4(153, -308,-80);
+
+    Triangulo labioInferior1(A_labioInferior1,B_labioInferior1,C_labioInferior1);
+    labioInferior1.establecerColor(0.3,0.5,0.5);
+    Triangulo labioInferior2(A_labioInferior2,B_labioInferior2,C_labioInferior2);
+    labioInferior2.establecerColor(0.3,0.5,0.5);
+    Triangulo labioInferior3(A_labioInferior3,B_labioInferior3,C_labioInferior3);
+    labioInferior3.establecerColor(0.3,0.5,0.5);
+    Triangulo labioInferior4(A_labioInferior4,B_labioInferior4,C_labioInferior4);
+    labioInferior4.establecerColor(0.3,0.5,0.5);
+
     escena.push_back(&esfera_cara);
     escena.push_back(&esfera_ojo);
     escena.push_back(&esfera_pupila);
@@ -576,6 +608,15 @@ int main()
     escena.push_back(&pieDerecho_garra1);
     escena.push_back(&pieDerecho_garra2);
     escena.push_back(&pieDerecho_garra3);
+
+    escena.push_back(&esfera_boca);
+
+    escena.push_back(&labioInferior1);
+    // escena.push_back(&labioInferior2);
+    // escena.push_back(&labioInferior3);
+    // escena.push_back(&labioInferior4);
+
+
     // VIEWPLANE
     int hres = 1000;
     int vres = 1000;
