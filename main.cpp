@@ -637,6 +637,45 @@ int main()
     diente2_derecha.establecerColor(1,1,1);
 
 
+    //Lengua lado izquierdo
+    Punto3D A_lengua1_izquierda(-30, -130,-30);
+    Punto3D B_lengua1_izquierda(-30, -120,-30);
+    Punto3D C_lengua1_izquierda(-15, -120,-30);
+
+    Punto3D B_lengua2_izquierda(-35, -125,-30);
+    Punto3D A_lengua2_izquierda(-30, -130,-30);
+    Punto3D C_lengua2_izquierda(-30, -120,-30);
+
+    Punto3D A_lengua3_izquierda(-35, -120,-30);
+    Punto3D B_lengua3_izquierda(0, -120,-30);
+    Punto3D C_lengua3_izquierda(0, -130,-30);
+
+    Triangulo lengua1_izquierda(A_lengua1_izquierda,B_lengua1_izquierda,C_lengua1_izquierda);
+    lengua1_izquierda.establecerColor(1,0,0);
+    Triangulo lengua2_izquierda(A_lengua2_izquierda,B_lengua2_izquierda,C_lengua2_izquierda);
+    lengua2_izquierda.establecerColor(1,0,0);
+    Triangulo lengua3_izquierda(A_lengua3_izquierda,B_lengua3_izquierda,C_lengua3_izquierda);
+    lengua3_izquierda.establecerColor(1,0,0);
+    
+    Punto3D B_lengua1_derecha(30, -130,-30);
+    Punto3D A_lengua1_derecha(30, -120,-30);
+    Punto3D C_lengua1_derecha(15, -120,-30);
+
+    Punto3D A_lengua2_derecha(35, -125,-30);
+    Punto3D B_lengua2_derecha(30, -130,-30);
+    Punto3D C_lengua2_derecha(30, -120,-30);
+
+    Punto3D B_lengua3_derecha(35, -120,-30);
+    Punto3D A_lengua3_derecha(0, -120,-30);
+    Punto3D C_lengua3_derecha(0, -130,-30);
+
+    Triangulo lengua1_derecha(A_lengua1_derecha,B_lengua1_derecha,C_lengua1_derecha);
+    lengua1_derecha.establecerColor(1,0,0);
+    Triangulo lengua2_derecha(A_lengua2_derecha,B_lengua2_derecha,C_lengua2_derecha);
+    lengua2_derecha.establecerColor(1,0,0);
+    Triangulo lengua3_derecha(A_lengua3_derecha,B_lengua3_derecha,C_lengua3_derecha);
+    lengua3_derecha.establecerColor(1,0,0);
+
     escena.push_back(&esfera_cara);
     escena.push_back(&esfera_ojo);
     escena.push_back(&esfera_pupila);
@@ -671,7 +710,7 @@ int main()
     escena.push_back(&esfera_pieIzquierdo_dedo3);
 
     escena.push_back(&pieIzquierdo1);
-    escena.push_back(&pieIzquierdo2);
+        escena.push_back(&pieIzquierdo2);
     escena.push_back(&pieIzquierdo3);
 
     escena.push_back(&esfera_pieDerecho_dedo1);
@@ -749,6 +788,14 @@ int main()
 
     escena.push_back(&diente1_derecha);
     escena.push_back(&diente2_derecha);
+
+    escena.push_back(&lengua1_izquierda);
+    escena.push_back(&lengua2_izquierda);
+    escena.push_back(&lengua3_izquierda);
+
+    escena.push_back(&lengua1_derecha);
+    escena.push_back(&lengua2_derecha);
+    escena.push_back(&lengua3_derecha);
     
 
 
