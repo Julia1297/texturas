@@ -493,36 +493,149 @@ int main()
     manoDerecha_garra2.establecerColor(0.7,0.7,0.7);
 
 
-    //Boca
-    Punto3D boca(0, -120, -30);
-    Esfera esfera_boca(boca, 55);
-    esfera_boca.establecerColor(0,0,0 );
+    //Boca labio superior
+    Punto3D A_labioSuperior1_izquierda(0, -70,-60);
+    Punto3D B_labioSuperior1_izquierda(0, -120,-60);
+    Punto3D C_labioSuperior1_izquierda(-50, -120,-60);
 
-    //Labio inferior
-    Punto3D A_labioInferior1(-55,-120,30);
-    Punto3D B_labioInferior1(-30, -150,30);
-    Punto3D C_labioInferior1(-55, -150,30);
+    Punto3D A_labioSuperior2_izquierda(-50, -110,-60);
+    Punto3D B_labioSuperior2_izquierda(-40, -110,-60);
+    Punto3D C_labioSuperior2_izquierda(-50, -120,-60);
 
-    Punto3D A_labioInferior2(150, -300,-20);
-    Punto3D B_labioInferior2(155, -300,-20);
-    Punto3D C_labioInferior2(153, -308,-20);
+    Punto3D A_labioSuperior3_izquierda(-40, -90,-60);
+    Punto3D B_labioSuperior3_izquierda(-20, -90,-60);
+    Punto3D C_labioSuperior3_izquierda(-40, -110,-60);
 
-    Punto3D A_labioInferior3(150, -300,-80);
-    Punto3D B_labioInferior3(155, -300,-80);
-    Punto3D C_labioInferior3(153, -308,-80);
+    Punto3D A_labioSuperior4_izquierda(-20, -70,-60);
+    Punto3D B_labioSuperior4_izquierda(0, -70,-60);
+    Punto3D C_labioSuperior4_izquierda(-20, -90,-60);
 
-    Punto3D A_labioInferior4(150, -300,-80);
-    Punto3D B_labioInferior4(155, -300,-80);
-    Punto3D C_labioInferior4(153, -308,-80);
+    Punto3D A_labioSuperior5_izquierda(-40, -90,-60);
+    Punto3D B_labioSuperior5_izquierda(-40, -110,-60);
+    Punto3D C_labioSuperior5_izquierda(-50, -110,-60);
 
-    Triangulo labioInferior1(A_labioInferior1,B_labioInferior1,C_labioInferior1);
-    labioInferior1.establecerColor(0.3,0.5,0.5);
-    Triangulo labioInferior2(A_labioInferior2,B_labioInferior2,C_labioInferior2);
-    labioInferior2.establecerColor(0.3,0.5,0.5);
-    Triangulo labioInferior3(A_labioInferior3,B_labioInferior3,C_labioInferior3);
-    labioInferior3.establecerColor(0.3,0.5,0.5);
-    Triangulo labioInferior4(A_labioInferior4,B_labioInferior4,C_labioInferior4);
-    labioInferior4.establecerColor(0.3,0.5,0.5);
+    Punto3D A_labioSuperior6_izquierda(-20, -70,-60);
+    Punto3D B_labioSuperior6_izquierda(-20, -90,-60);
+    Punto3D C_labioSuperior6_izquierda(-40, -90,-60);
+
+    Triangulo labioSuperior1_izquierda(A_labioSuperior1_izquierda,B_labioSuperior1_izquierda,C_labioSuperior1_izquierda);
+    labioSuperior1_izquierda.establecerColor(0,0,0);
+    Triangulo labioSuperior2_izquierda(A_labioSuperior2_izquierda,B_labioSuperior2_izquierda,C_labioSuperior2_izquierda);
+    labioSuperior2_izquierda.establecerColor(0,0,0);
+    Triangulo labioSuperior3_izquierda(A_labioSuperior3_izquierda,B_labioSuperior3_izquierda,C_labioSuperior3_izquierda);
+    labioSuperior3_izquierda.establecerColor(0,0,0);
+    Triangulo labioSuperior4_izquierda(A_labioSuperior4_izquierda,B_labioSuperior4_izquierda,C_labioSuperior4_izquierda);
+    labioSuperior4_izquierda.establecerColor(0,0,0);
+    Triangulo labioSuperior5_izquierda(A_labioSuperior5_izquierda,B_labioSuperior5_izquierda,C_labioSuperior5_izquierda);
+    labioSuperior5_izquierda.establecerColor(0,0,0);
+    Triangulo labioSuperior6_izquierda(A_labioSuperior6_izquierda,B_labioSuperior6_izquierda,C_labioSuperior6_izquierda);
+    labioSuperior6_izquierda.establecerColor(0,0,0);
+
+    Punto3D A_labioSuperior1_derecha(0, -70,-60);
+    Punto3D B_labioSuperior1_derecha(0, -120,-60);
+    Punto3D C_labioSuperior1_derecha(50, -120,-60);
+
+    Punto3D A_labioSuperior2_derecha(50, -110,-60);
+    Punto3D B_labioSuperior2_derecha(40, -110,-60);
+    Punto3D C_labioSuperior2_derecha(50, -120,-60);
+
+    Punto3D A_labioSuperior3_derecha(40, -90,-60);
+    Punto3D B_labioSuperior3_derecha(20, -90,-60);
+    Punto3D C_labioSuperior3_derecha(40, -110,-60);
+
+    Punto3D A_labioSuperior4_derecha(20, -70,-60);
+    Punto3D B_labioSuperior4_derecha(0, -70,-60);
+    Punto3D C_labioSuperior4_derecha(20, -90,-60);
+
+    Punto3D A_labioSuperior5_derecha(40, -90,-60);
+    Punto3D B_labioSuperior5_derecha(40, -110,-60);
+    Punto3D C_labioSuperior5_derecha(50, -110,-60);
+
+    Punto3D A_labioSuperior6_derecha(20, -70,-60);
+    Punto3D B_labioSuperior6_derecha(20, -90,-60);
+    Punto3D C_labioSuperior6_derecha(40, -90,-60);
+
+    Triangulo labioSuperior1_derecha(A_labioSuperior1_derecha,B_labioSuperior1_derecha,C_labioSuperior1_derecha);
+    labioSuperior1_derecha.establecerColor(0,0,0);
+    Triangulo labioSuperior2_derecha(A_labioSuperior2_derecha,B_labioSuperior2_derecha,C_labioSuperior2_derecha);
+    labioSuperior2_derecha.establecerColor(0,0,0);
+    Triangulo labioSuperior3_derecha(A_labioSuperior3_derecha,B_labioSuperior3_derecha,C_labioSuperior3_derecha);
+    labioSuperior3_derecha.establecerColor(0,0,0);
+    Triangulo labioSuperior4_derecha(A_labioSuperior4_derecha,B_labioSuperior4_derecha,C_labioSuperior4_derecha);
+    labioSuperior4_derecha.establecerColor(0,0,0);
+    Triangulo labioSuperior5_derecha(A_labioSuperior5_derecha,B_labioSuperior5_derecha,C_labioSuperior5_derecha);
+    labioSuperior5_derecha.establecerColor(0,0,0);
+    Triangulo labioSuperior6_derecha(A_labioSuperior6_derecha,B_labioSuperior6_derecha,C_labioSuperior6_derecha);
+    labioSuperior6_derecha.establecerColor(0,0,0);
+
+    //Boca labio inferior
+
+    Punto3D A_labioInferior1_izquierda(-50, -120,-60);
+    Punto3D B_labioInferior1_izquierda(-30, -120,-60);
+    Punto3D C_labioInferior1_izquierda(-30, -130,-60);
+
+    Punto3D A_labioInferior2_izquierda(-30, -120,-60);
+    Punto3D B_labioInferior2_izquierda(0, -120,-60);
+    Punto3D C_labioInferior2_izquierda(-30, -130,-60);
+
+    Punto3D A_labioInferior3_izquierda(0, -120,-60);
+    Punto3D B_labioInferior3_izquierda(0, -130,-60);
+    Punto3D C_labioInferior3_izquierda(-30, -130,-60);
+
+    Triangulo labioInferior1_izquierda(A_labioInferior1_izquierda,B_labioInferior1_izquierda,C_labioInferior1_izquierda);
+    labioInferior1_izquierda.establecerColor(0,0,0);
+    Triangulo labioInferior2_izquierda(A_labioInferior2_izquierda,B_labioInferior2_izquierda,C_labioInferior2_izquierda);
+    labioInferior2_izquierda.establecerColor(0,0,0);
+    Triangulo labioInferior3_izquierda(A_labioInferior3_izquierda,B_labioInferior3_izquierda,C_labioInferior3_izquierda);
+    labioInferior3_izquierda.establecerColor(0,0,0);
+
+    Punto3D A_labioInferior1_derecha(50, -120,-60);
+    Punto3D B_labioInferior1_derecha(30, -120,-60);
+    Punto3D C_labioInferior1_derecha(30, -130,-60);
+
+    Punto3D A_labioInferior2_derecha(30, -120,-60);
+    Punto3D B_labioInferior2_derecha(0, -120,-60);
+    Punto3D C_labioInferior2_derecha(30, -130,-60);
+
+    Punto3D A_labioInferior3_derecha(0, -120,-60);
+    Punto3D B_labioInferior3_derecha(0, -130,-60);
+    Punto3D C_labioInferior3_derecha(30, -130,-60);
+
+    Triangulo labioInferior1_derecha(A_labioInferior1_derecha,B_labioInferior1_derecha,C_labioInferior1_derecha);
+    labioInferior1_derecha.establecerColor(0,0,0);
+    Triangulo labioInferior2_derecha(A_labioInferior2_derecha,B_labioInferior2_derecha,C_labioInferior2_derecha);
+    labioInferior2_derecha.establecerColor(0,0,0);
+    Triangulo labioInferior3_derecha(A_labioInferior3_derecha,B_labioInferior3_derecha,C_labioInferior3_derecha);
+    labioInferior3_derecha.establecerColor(0,0,0);
+
+    //Dientes lado izquierdo
+    Punto3D A_diente1_izquierda(-50, -120,-30);
+    Punto3D B_diente1_izquierda(-35, -125,-30);
+    Punto3D C_diente1_izquierda(-30, -130,-30);
+
+    Punto3D A_diente2_izquierda(-15, -120,-30);
+    Punto3D B_diente2_izquierda(0, -130,-30);
+    Punto3D C_diente2_izquierda(-30, -130,-30);
+
+    Triangulo diente1_izquierda(A_diente1_izquierda,B_diente1_izquierda,C_diente1_izquierda);
+    diente1_izquierda.establecerColor(1,1,1);
+    Triangulo diente2_izquierda(A_diente2_izquierda,B_diente2_izquierda,C_diente2_izquierda);
+    diente2_izquierda.establecerColor(1,1,1);
+
+    //Dientes lado derecho
+    Punto3D B_diente1_derecha(50, -120,-30);
+    Punto3D A_diente1_derecha(35, -125,-30);
+    Punto3D C_diente1_derecha(30, -130,-30);
+
+    Punto3D B_diente2_derecha(15, -120,-30);
+    Punto3D A_diente2_derecha(0, -130,-30);
+    Punto3D C_diente2_derecha(30, -130,-30);
+
+    Triangulo diente1_derecha(A_diente1_derecha,B_diente1_derecha,C_diente1_derecha);
+    diente1_derecha.establecerColor(1,1,1);
+    Triangulo diente2_derecha(A_diente2_derecha,B_diente2_derecha,C_diente2_derecha);
+    diente2_derecha.establecerColor(1,1,1);
+
 
     escena.push_back(&esfera_cara);
     escena.push_back(&esfera_ojo);
@@ -609,12 +722,34 @@ int main()
     escena.push_back(&pieDerecho_garra2);
     escena.push_back(&pieDerecho_garra3);
 
-    escena.push_back(&esfera_boca);
+    escena.push_back(&labioSuperior1_izquierda);
+    escena.push_back(&labioSuperior2_izquierda);
+    escena.push_back(&labioSuperior3_izquierda);
+    escena.push_back(&labioSuperior4_izquierda);
+    escena.push_back(&labioSuperior5_izquierda);
+    escena.push_back(&labioSuperior6_izquierda);
 
-    escena.push_back(&labioInferior1);
-    // escena.push_back(&labioInferior2);
-    // escena.push_back(&labioInferior3);
-    // escena.push_back(&labioInferior4);
+    escena.push_back(&labioSuperior1_derecha);
+    escena.push_back(&labioSuperior2_derecha);
+    escena.push_back(&labioSuperior3_derecha);
+    escena.push_back(&labioSuperior4_derecha);
+    escena.push_back(&labioSuperior5_derecha);
+    escena.push_back(&labioSuperior6_derecha);
+
+    escena.push_back(&labioInferior1_izquierda);
+    escena.push_back(&labioInferior2_izquierda);
+    escena.push_back(&labioInferior3_izquierda);
+
+    escena.push_back(&labioInferior1_derecha);
+    escena.push_back(&labioInferior2_derecha);
+    escena.push_back(&labioInferior3_derecha);
+
+    escena.push_back(&diente1_izquierda);
+    escena.push_back(&diente2_izquierda);
+
+    escena.push_back(&diente1_derecha);
+    escena.push_back(&diente2_derecha);
+    
 
 
     // VIEWPLANE
