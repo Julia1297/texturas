@@ -1,2 +1,2 @@
 #include "ObjetoGeometrico.h"
-ObjetoGeometrico::ObjetoGeometrico(){}
+ObjetoGeometrico::ObjetoGeometrico(bool s){sombra = s;}

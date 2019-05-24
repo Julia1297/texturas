@@ -4,11 +4,11 @@
 class Triangulo : public ObjetoGeometrico
 {
 public:
-    Triangulo(Punto3D, Punto3D, Punto3D);
+    Triangulo(Punto3D, Punto3D, Punto3D, bool);
     
     bool hayImpacto(const Rayo& r, double& t, Vector3D& n, Punto3D& q) const;
     void establecerColor(double, double, double);
-    ColorRGB obtenerColor();
+    ColorRGB obtenerColor(Punto3D hitp);
 
     Punto3D A, B, C;
     ColorRGB color;

@@ -1,4 +1,4 @@
-g++ -o ray main.cpp Utilitarios.cpp Esfera.cpp ObjetoGeometrico.cpp Plano.cpp Punto3D.cpp Rayo.cpp Vector3D.cpp ViewPlane.cpp Triangulo.cpp LuzPuntual.cpp
+g++ -o ray Image.cpp ImageTexture.cpp ImTexture.cpp main.cpp Utilitarios.cpp Esfera.cpp ObjetoGeometrico.cpp Plano.cpp Punto3D.cpp Rayo.cpp Vector3D.cpp ViewPlane.cpp Triangulo.cpp LuzPuntual.cpp
 ./ray.exe
 mspaint.exe img.bmp
 

@@ -1,7 +1,7 @@
 #include "Triangulo.h"
-#include <iostream>
+#include<iostream>
 using namespace std;
-Triangulo::Triangulo(Punto3D a, Punto3D b, Punto3D c)
+Triangulo::Triangulo(Punto3D a, Punto3D b, Punto3D c, bool s):ObjetoGeometrico(s)
 {
     A = a;
     B = b;
@@ -41,7 +41,6 @@ bool Triangulo::hayImpacto(const Rayo& r, double& tmin, Vector3D& n, Punto3D& q)
     {
         return false;
     }
-     //        0.00000001
     if ( t < 0.0000001)
     {
         return false;
@@ -49,7 +48,7 @@ bool Triangulo::hayImpacto(const Rayo& r, double& tmin, Vector3D& n, Punto3D& q)
     tmin = t;
     n = (( B - A )^( C - A)).hat();
     q = r.o + t * r.d;
-    //n.mostrar();
+    n.mostrar();
     return true;
 }
 
@@ -59,7 +58,7 @@ void Triangulo::establecerColor(double v_r, double v_g, double v_b)
     color.g = v_g;
     color.b = v_b;
 }
-ColorRGB Triangulo::obtenerColor()
+ColorRGB Triangulo::obtenerColor(Punto3D hitp)
 {
 ColorRGB c;
     c.r = color.r;

@@ -1,5 +1,6 @@
 #include "Plano.h"
-Plano::Plano(Punto3D v_p, Vector3D v_n)
+#include <iostream>
+Plano::Plano(Punto3D v_p, Vector3D v_n,bool s):ObjetoGeometrico(s)
 {
     p = v_p;
     n = v_n;
@@ -7,7 +8,7 @@ Plano::Plano(Punto3D v_p, Vector3D v_n)
 bool Plano::hayImpacto(const Rayo& _rayo, double& _t, Vector3D& _n, Punto3D& _q  ) const
 {
     double t = ((p - _rayo.o)*n) / (_rayo.d * n);
-    if( t > 0.0000001 ) 
+    if( t > 0.0 ) 
     {
         _q = _rayo.o + t*_rayo.d;
         _n = n;
@@ -17,7 +18,7 @@ bool Plano::hayImpacto(const Rayo& _rayo, double& _t, Vector3D& _n, Punto3D& _q 
     }
     else
     {
-        return false;   
+        return true;   
     }    
 }
 void Plano::establecerColor(double v_r, double v_g, double v_b)
@@ -26,11 +27,4 @@ void Plano::establecerColor(double v_r, double v_g, double v_b)
     color.g = v_g;
     color.b = v_b;
 }
-ColorRGB Plano::obtenerColor()
-{
-    ColorRGB c;
-    c.r = color.r;
-    c.g = color.g;
-    c.b = color.b;
-    return  c;
-}
+
