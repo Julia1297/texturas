@@ -93,7 +93,7 @@ int main()
 
     // ESCENA------------------------------------------------------------------
      Punto3D centroNube(-150.0, -150.0, -50.0);
-    double radioNube = 50;
+    double radioNube = 100;
     Esfera nube1(centroNube, radioNube, true);   
     nube1.setImTexture();
 

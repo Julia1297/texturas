@@ -71,7 +71,7 @@ ColorRGB Esfera::obtenerColor(Punto3D hitp)
 void Esfera::setImTexture()
 {
     im=new ImTexture();
-    m.read_ppm_file("infinite.ppm");
+    m.read_ppm_file("mundo.ppm");
     im->set_image(&m);
     im->set_SphereMap(&sm);
 }
