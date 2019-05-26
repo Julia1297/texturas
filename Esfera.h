@@ -7,7 +7,7 @@
 class Esfera : public ObjetoGeometrico
 {
     public:
-    Esfera(Punto3D, double,bool);
+    Esfera(Punto3D, double, bool);
     ~Esfera();
     bool hayImpacto(const Rayo& r, double& t, Vector3D& n, Punto3D& q) const;
     void establecerColor(double, double, double);
