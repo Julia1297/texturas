@@ -70,9 +70,8 @@ ColorRGB obtenerColorPixel(const Rayo& r, vector<ObjetoGeometrico*> objetos, Luz
 
 int main()
 {
-
     Image l;
-    l.read_ppm_file("salar-uyuni.ppm");
+    l.read_ppm_file("fondo.ppm");
     ImageTexture a(&l);
     LuzPuntual luz(1,1,1,100,-100,-2050);
     LuzPuntual luz_ambiente(0.5, 0.5, 0.1, 0,0,100);
