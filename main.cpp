@@ -27,72 +27,59 @@ double acotar(double n)
     }
 }
 
-ColorRGB obtenerColorPixel(const Rayo &r, vector<ObjetoGeometrico *> objetos, LuzPuntual luz, LuzPuntual luz_ambiente, ImageTexture& a)
-{
-    {
+ColorRGB obtenerColorPixel(const Rayo& r, vector<ObjetoGeometrico*> objetos, LuzPuntual luz, ImageTexture& a){
+    
+    ColorRGB color=a.get_color();
 
-        ColorRGB color=a.get_color();
+    double t;
+    double tmin = 2000000;    
+    Vector3D n;
+    Punto3D q;
 
-        color.r = 0.0;
-        color.g = 0.0;
-        color.b = 0.0;
+    Vector3D h;
+    for(int i = 0; i < objetos.size(); i++) {
+        if( objetos[i]->hayImpacto(r, t, n, q) && t < tmin && objetos[i]->sombra == true ){
+            // color.r = luz.color.r * objetos[i]->obtenerColor().r * std::max(0.0, n * (luz.posicion - q).hat()) ;
+            // color.g = luz.color.g * objetos[i]->obtenerColor().g * std::max(0.0, n * (luz.posicion - q).hat());
+            // color.b = luz.color.b * objetos[i]->obtenerColor().b * std::max(0.0, n * (luz.posicion - q).hat());
+            
+            // h = ((-1)*r.d).hat();
+            // color.r = luz.color.r * objetos[i]->obtenerColor().r * std::max(0.0, n * (luz.posicion - q).hat()) + luz.color.r * objetos[i]->obtenerColor().r * pow(max(0.0, n * h), 1000);
+            // color.g = luz.color.g * objetos[i]->obtenerColor().g * std::max(0.0, n * (luz.posicion - q).hat()) + luz.color.r * objetos[i]->obtenerColor().r * pow(max(0.0, n * h), 1000);
+            // color.b = luz.color.b * objetos[i]->obtenerColor().b * std::max(0.0, n * (luz.posicion - q).hat()) + luz.color.r * objetos[i]->obtenerColor().r * pow(max(0.0, n * h), 1000);
 
-        double t;
-        double tmin = 2000000;
-        Vector3D n;
-        Punto3D q;
+            h = ((-1)*r.d).hat();
+            color.r = acotar( 0.1 + luz.color.r * objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).r * std::max(0.0, n * (luz.posicion - q).hat()) + luz.color.r * objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).r * pow(max(0.0, n * h), 1000));
+            color.g = acotar( 0.1 + luz.color.g * objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).g * std::max(0.0, n * (luz.posicion - q).hat()) + luz.color.r * objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).r * pow(max(0.0, n * h), 1000));
+            color.b = acotar( 0.1 + luz.color.b * objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).b * std::max(0.0, n * (luz.posicion - q).hat()) + luz.color.r * objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).r * pow(max(0.0, n * h), 1000));
 
-        Vector3D h;
-        for (int i = 0; i < objetos.size(); i++)
-        {
-            if (objetos[i]->hayImpacto(r, t, n, q) && t < tmin)
-            {
-                // color.r = objetos[i]->obtenerColor().r * luz_ambiente.color.r + objetos[i]->obtenerColor().r * luz.color.r * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().r * luz.color.r * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
-                // color.g = objetos[i]->obtenerColor().g * luz_ambiente.color.g + objetos[i]->obtenerColor().g * luz.color.g * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().g * luz.color.g * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
-                // color.b = objetos[i]->obtenerColor().b * luz_ambiente.color.b + objetos[i]->obtenerColor().b * luz.color.b * std::max(0.0, n * (luz.posicion - q).hat()) + objetos[i]->obtenerColor().b * luz.color.b * pow(std::max(0.0, n * ((-1) * r.d + (luz.posicion - q).hat()).hat()), 10000);
-                // tmin = t;
-                color.r = objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).r * luz_ambiente.color.r + objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).r * luz.color.r * max(0.0, n * (luz.posicion - q).hat() ) + objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).r * luz.color.r * pow(max(0.0, n * ((-1)*r.d + (luz.posicion - q).hat()).hat() ),100);
-                color.g = objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).g * luz_ambiente.color.g + objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).g * luz.color.g * max(0.0, n * (luz.posicion - q).hat() ) + objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).g * luz.color.g * pow(max(0.0, n * ((-1)*r.d + (luz.posicion - q).hat()).hat() ),100);
-                color.b = objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).b * luz_ambiente.color.b + objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).b * luz.color.b * max(0.0, n * (luz.posicion - q).hat() ) + objetos[i]->obtenerColor(Punto3D(n.x, n.y, n.z)).b * luz.color.b * pow(max(0.0, n * ((-1)*r.d + (luz.posicion - q).hat()).hat() ),100);
-
-                
-                
-
-
-                // double t_sombra;
-                // double t_min_sombra = 2000000;
-                // Vector3D n_sombra;
-                // Punto3D q_sombra;
-                // Rayo rayo_sombra(q, (luz.posicion - q)) ;
-                // for (int j = 0; j < objetos.size(); j++) {
-                //     if ((objetos[j]->hayImpacto(rayo_sombra, t_sombra, n_sombra, q_sombra) && t_sombra < t_min_sombra)) {
-                //         color.r = objetos[i]->obtenerColor().r * luz_ambiente.color.r;
-                //         color.g = objetos[i]->obtenerColor().g * luz_ambiente.color.g;
-                //         color.b = objetos[i]->obtenerColor().b * luz_ambiente.color.b;
-                //         t_min_sombra = t_sombra;
-                //     }
-                // }
-                tmin = t;
-
-               
-            }
+            tmin = t;
         }
-        return color;
+        if ( objetos[i]->hayImpacto(r, t, n, q) && t < tmin && objetos[i]->sombra == false ){
+            //std::cout<<"No hay interseccion\n";
+            h = ((-1)*r.d).hat();
+            color.r = objetos[i]->obtenerColor(r.o).r;
+            color.g = objetos[i]->obtenerColor(r.o).g;
+            color.b = objetos[i]->obtenerColor(r.o).b;
+            tmin = t;
+        }
     }
+   // std::cout<<"No hay interseccion\n";
+    return color;
 }
 
 int main()
 {
 
     Image l;
-    l.read_ppm_file("ugh22.ppm");
+    l.read_ppm_file("salar-uyuni.ppm");
     ImageTexture a(&l);
-    LuzPuntual luz(0.5, 0.5, 0.9,0,130,-550);
+    LuzPuntual luz(1,1,1,100,-100,-2050);
     LuzPuntual luz_ambiente(0.5, 0.5, 0.1, 0,0,100);
     vector<ObjetoGeometrico *> escena;
 
     // ESCENA-----------------------------------------------------------------
-    Punto3D cara(0, 0, -30);
+    Punto3D cara(0, 0, 0);
     Esfera esfera_cara(cara, 200, true);
     esfera_cara.setImTexture();
 
@@ -562,11 +549,12 @@ int main()
     escena.push_back(&pieDerecho_garra2);
     escena.push_back(&pieDerecho_garra3);
     
+    ColorRGB color_pixel;
 
 
     // VIEWPLANE
-    int hres = 1000;
-    int vres = 1000;
+    int hres = 1920;
+    int vres = 1200;
     double s = 1.0;
     ViewPlane vp(hres, vres, s);
 
@@ -590,9 +578,11 @@ int main()
             Punto3D origen(x, y, z);
             Rayo rayo(origen, direccion);
 
-            pixeles[fil * width + col].r = obtenerColorPixel(rayo, escena, luz, luz_ambiente, a).r;
-            pixeles[fil * width + col].g = obtenerColorPixel(rayo, escena, luz, luz_ambiente, a).g;
-            pixeles[fil * width + col].b = obtenerColorPixel(rayo, escena, luz, luz_ambiente, a).b;
+                       color_pixel = obtenerColorPixel(rayo, escena, luz, a);
+
+            pixeles[fil*width+col].r = color_pixel.r;
+            pixeles[fil*width+col].g = color_pixel.g;
+            pixeles[fil*width+col].b = color_pixel.b;
         }
     }
     savebmp("img.bmp", width, height, dpi, pixeles);

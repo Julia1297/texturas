@@ -48,7 +48,7 @@ bool Triangulo::hayImpacto(const Rayo& r, double& tmin, Vector3D& n, Punto3D& q)
     tmin = t;
     n = (( B - A )^( C - A)).hat();
     q = r.o + t * r.d;
-    n.mostrar();
+
     return true;
 }
 
