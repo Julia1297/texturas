@@ -1,6 +1,7 @@
 #include "Esfera.h"
 #include<iostream>
 #include <math.h>
+#include <string.h>
 using namespace std;
 
 Esfera::Esfera(Punto3D v_c, double v_r,bool s):c( v_c), r( v_r), ObjetoGeometrico(s)
@@ -68,10 +69,10 @@ ColorRGB Esfera::obtenerColor(Punto3D hitp)
     return c;
 }
 
-void Esfera::setImTexture()
+void Esfera::setImTexture(const char* imagen)
 {
     im=new ImTexture();
-    m.read_ppm_file("mike-face.ppm");
+    m.read_ppm_file(imagen);
     im->set_image(&m);
     im->set_SphereMap(&sm);
 }

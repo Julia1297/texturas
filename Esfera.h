@@ -3,6 +3,7 @@
 #include "ColorRGB.h"
 #include "ObjetoGeometrico.h"
 #include "ImTexture.h"
+#include <string>
 
 class Esfera : public ObjetoGeometrico
 {
@@ -12,7 +13,7 @@ class Esfera : public ObjetoGeometrico
     bool hayImpacto(const Rayo& r, double& t, Vector3D& n, Punto3D& q) const;
     void establecerColor(double, double, double);
     ColorRGB obtenerColor(Punto3D hitp);
-    void setImTexture();
+    void setImTexture(const char*);
 
     Punto3D c;
     double r;

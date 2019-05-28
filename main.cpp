@@ -80,7 +80,11 @@ int main()
     // ESCENA-----------------------------------------------------------------
     Punto3D cara(0, 0, 0);
     Esfera esfera_cara(cara, 200, true);
-    esfera_cara.setImTexture();
+    esfera_cara.setImTexture("mike-face.ppm");
+    //
+    Punto3D fiesta(0, -475, 0);
+    Esfera esfera_fiesta(fiesta, 115, true);
+    esfera_fiesta.setImTexture("discoTexture.ppm");
 
     Punto3D A_orejaIzquierda(-80,220,-100);
     Punto3D B_orejaIzquierda(-65,190,-100);
@@ -469,6 +473,7 @@ int main()
 
 
     escena.push_back(&esfera_cara);
+    escena.push_back(&esfera_fiesta);
     escena.push_back(&orejaIzquierda);
     escena.push_back(&orejaDerecha);
 
