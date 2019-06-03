@@ -589,6 +589,6 @@ int main()
             pixeles[fil*width+col].b = color_pixel.b;
         }
     }
-    savebmp("img.bmp", width, height, dpi, pixeles);
+    savebmp("img1.bmp", width, height, dpi, pixeles);
     return 0;
 }
