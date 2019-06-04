@@ -81,10 +81,43 @@ int main()
     Punto3D cara(0, 0, 0);
     Esfera esfera_cara(cara, 200, true);
     esfera_cara.setImTexture("mike-face.ppm");
-    //
-    Punto3D fiesta(0, -475, 0);
+    //esfera fiesta
+    Punto3D fiesta(0, 475, 0);
     Esfera esfera_fiesta(fiesta, 115, true);
     esfera_fiesta.setImTexture("discoTexture.ppm");
+
+    //esferas de colores
+    Punto3D colores1(-240, -470, 0);
+    Esfera esfera_colores1(colores1, 55, true);
+    esfera_colores1.setImTexture("texture1.ppm");
+
+    Punto3D colores2(-150, -405, 0);
+    Esfera esfera_colores2(colores2, 55, true);
+    esfera_colores2.setImTexture("texture2.ppm");
+
+    Punto3D colores3(-80, -475, 0);
+    Esfera esfera_colores3(colores3, 55, true);
+    esfera_colores3.setImTexture("texture2.ppm");
+
+    Punto3D colores4(-40, -380, 0);
+    Esfera esfera_colores4(colores4, 55, true);
+    esfera_colores4.setImTexture("texture1.ppm");
+
+    Punto3D colores5(65, -380, 0);
+    Esfera esfera_colores5(colores5, 55, true);
+    esfera_colores5.setImTexture("texture2.ppm");
+
+    Punto3D colores6(50, -475, 0);
+    Esfera esfera_colores6(colores6, 55, true);
+    esfera_colores6.setImTexture("texture2.ppm");
+
+    Punto3D colores7(150, -455, 0);
+    Esfera esfera_colores7(colores7, 55, true);
+    esfera_colores7.setImTexture("texture1.ppm");
+
+    Punto3D colores8(250, -475, 0);
+    Esfera esfera_colores8(colores8, 55, true);
+    esfera_colores8.setImTexture("texture1.ppm");
 
     Punto3D A_orejaIzquierda(-80,220,-100);
     Punto3D B_orejaIzquierda(-65,190,-100);
@@ -474,6 +507,20 @@ int main()
 
     escena.push_back(&esfera_cara);
     escena.push_back(&esfera_fiesta);
+
+    
+    escena.push_back(&esfera_colores2);
+    
+    escena.push_back(&esfera_colores4);
+    escena.push_back(&esfera_colores5);
+    
+    escena.push_back(&esfera_colores7);
+    escena.push_back(&esfera_colores1);
+    escena.push_back(&esfera_colores3);
+    escena.push_back(&esfera_colores6);
+    escena.push_back(&esfera_colores8);
+    
+
     escena.push_back(&orejaIzquierda);
     escena.push_back(&orejaDerecha);
 
