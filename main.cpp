@@ -87,55 +87,59 @@ int main()
     esfera_fiesta.setImTexture("discoTexture.ppm");
 
     //esferas de colores
-    Punto3D colores1(-240, -470, 0);
-    Esfera esfera_colores1(colores1, 55, true);
+    Punto3D colores1(-240, -455, 0);
+    Esfera esfera_colores1(colores1, 45, true);
     esfera_colores1.setImTexture("texture1.ppm");
 
-    Punto3D colores2(-155, -395, 0);
-    Esfera esfera_colores2(colores2, 55, true);
+    Punto3D colores2(-160, -410, 0);
+    Esfera esfera_colores2(colores2, 45, true);
     esfera_colores2.setImTexture("texture2.ppm");
 
-    Punto3D colores3(-80, -475, 0);
-    Esfera esfera_colores3(colores3, 55, true);
+    Punto3D colores3(-80, -455, 0);
+    Esfera esfera_colores3(colores3, 45, true);
     esfera_colores3.setImTexture("texture2.ppm");
 
-    Punto3D colores4(-40, -375, 0);
-    Esfera esfera_colores4(colores4, 55, true);
+    Punto3D colores4(-15, -390, 0);
+    Esfera esfera_colores4(colores4, 45, true);
     esfera_colores4.setImTexture("texture1.ppm");
 
-    Punto3D colores5(75, -370, 0);
-    Esfera esfera_colores5(colores5, 55, true);
+    Punto3D colores5(50, -455, 0);
+    Esfera esfera_colores5(colores5, 45, true);
     esfera_colores5.setImTexture("texture2.ppm");
 
-    Punto3D colores6(50, -475, 0);
-    Esfera esfera_colores6(colores6, 55, true);
-    esfera_colores6.setImTexture("texture2.ppm");
+    Punto3D colores6(140, -455, 0);
+    Esfera esfera_colores6(colores6, 45, true);
+    esfera_colores6.setImTexture("texture1.ppm");
 
-    Punto3D colores7(155, -450, 0);
-    Esfera esfera_colores7(colores7, 55, true);
-    esfera_colores7.setImTexture("texture1.ppm");
+    Punto3D colores7(200, -390, 0);
+    Esfera esfera_colores7(colores7, 45, true);
+    esfera_colores7.setImTexture("texture2.ppm");
 
-    Punto3D colores8(260, -475, 0);
-    Esfera esfera_colores8(colores8, 55, true);
+    Punto3D colores8(260, -455, 0);
+    Esfera esfera_colores8(colores8, 45, true);
     esfera_colores8.setImTexture("texture1.ppm");
 
 //esferas de deporte
 
-    Punto3D deporte1(420, -475, 0);
+    Punto3D deporte1(590, -465, 0);
     Esfera esfera_deporte1(deporte1, 35, true);
     esfera_deporte1.setImTexture("tenis.ppm");
 
-    Punto3D deporte2(520, -390, 0);
+    Punto3D deporte2(770, -295, 0);
     Esfera esfera_deporte2(deporte2, 75, true);
     esfera_deporte2.setImTexture("voley.ppm");
 
-    Punto3D deporte3(680, -400, 0);
-    Esfera esfera_deporte3(deporte3, 65, true);
+    Punto3D deporte3(695, -425, 0);
+    Esfera esfera_deporte3(deporte3, 75, true);
     esfera_deporte3.setImTexture("basketball.ppm");
 
-    Punto3D deporte4(880, -545, 0);
-    Esfera esfera_deporte4(deporte4, 55, true);
+    Punto3D deporte4(845, -425, 0);
+    Esfera esfera_deporte4(deporte4, 75, true);
     esfera_deporte4.setImTexture("futbol.ppm");
+
+    Punto3D deporte5(590, -465, 0);
+    Esfera esfera_deporte5(deporte5, 35, true);
+    esfera_deporte5.setImTexture("tenis.ppm");
 
 //foquitos de arriba
     Punto3D foquito1(-880, 545, 0);
@@ -187,7 +191,7 @@ int main()
     esfera_foquito12.setImTexture("luz2.ppm");
 
 //logo
-    Punto3D logotipo(-850, -405, 0);
+    Punto3D logotipo(-850, -410, 0);
     Esfera esfera_logotipo(logotipo, 90, true);
     esfera_logotipo.setImTexture("logo_1.ppm");  
 
