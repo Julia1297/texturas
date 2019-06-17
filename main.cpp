@@ -91,7 +91,7 @@ int main()
     Esfera esfera_colores1(colores1, 55, true);
     esfera_colores1.setImTexture("texture1.ppm");
 
-    Punto3D colores2(-150, -405, 0);
+    Punto3D colores2(-155, -395, 0);
     Esfera esfera_colores2(colores2, 55, true);
     esfera_colores2.setImTexture("texture2.ppm");
 
@@ -99,11 +99,11 @@ int main()
     Esfera esfera_colores3(colores3, 55, true);
     esfera_colores3.setImTexture("texture2.ppm");
 
-    Punto3D colores4(-40, -380, 0);
+    Punto3D colores4(-40, -375, 0);
     Esfera esfera_colores4(colores4, 55, true);
     esfera_colores4.setImTexture("texture1.ppm");
 
-    Punto3D colores5(65, -380, 0);
+    Punto3D colores5(75, -370, 0);
     Esfera esfera_colores5(colores5, 55, true);
     esfera_colores5.setImTexture("texture2.ppm");
 
@@ -111,13 +111,87 @@ int main()
     Esfera esfera_colores6(colores6, 55, true);
     esfera_colores6.setImTexture("texture2.ppm");
 
-    Punto3D colores7(150, -455, 0);
+    Punto3D colores7(155, -450, 0);
     Esfera esfera_colores7(colores7, 55, true);
     esfera_colores7.setImTexture("texture1.ppm");
 
-    Punto3D colores8(250, -475, 0);
+    Punto3D colores8(260, -475, 0);
     Esfera esfera_colores8(colores8, 55, true);
     esfera_colores8.setImTexture("texture1.ppm");
+
+//esferas de deporte
+
+    Punto3D deporte1(420, -475, 0);
+    Esfera esfera_deporte1(deporte1, 35, true);
+    esfera_deporte1.setImTexture("tenis.ppm");
+
+    Punto3D deporte2(520, -390, 0);
+    Esfera esfera_deporte2(deporte2, 75, true);
+    esfera_deporte2.setImTexture("voley.ppm");
+
+    Punto3D deporte3(680, -400, 0);
+    Esfera esfera_deporte3(deporte3, 65, true);
+    esfera_deporte3.setImTexture("basketball.ppm");
+
+    Punto3D deporte4(880, -545, 0);
+    Esfera esfera_deporte4(deporte4, 55, true);
+    esfera_deporte4.setImTexture("futbol.ppm");
+
+//foquitos de arriba
+    Punto3D foquito1(-880, 545, 0);
+    Esfera esfera_foquito1(foquito1, 55, true);
+    esfera_foquito1.setImTexture("luz2.ppm");
+    
+    Punto3D foquito2(-735, 570, 0);
+    Esfera esfera_foquito2(foquito2, 30, true);
+    esfera_foquito2.setImTexture("luz1.ppm");
+
+    Punto3D foquito3(-590, 545, 0);
+    Esfera esfera_foquito3(foquito3, 55, true);
+    esfera_foquito3.setImTexture("luz2.ppm");
+
+    Punto3D foquito4(-445, 570, 0);
+    Esfera esfera_foquito4(foquito4, 30, true);
+    esfera_foquito4.setImTexture("luz1.ppm");
+    
+    Punto3D foquito5(-300, 545, 0);
+    Esfera esfera_foquito5(foquito5, 55, true);
+    esfera_foquito5.setImTexture("luz2.ppm");
+    
+    Punto3D foquito6(-155, 570, 0);
+    Esfera esfera_foquito6(foquito6,30, true);
+    esfera_foquito6.setImTexture("luz1.ppm");
+
+    Punto3D foquito7(155, 570, 0);
+    Esfera esfera_foquito7(foquito7, 30, true);
+    esfera_foquito7.setImTexture("luz1.ppm");
+    
+    Punto3D foquito8(300, 545, 0);
+    Esfera esfera_foquito8(foquito8, 55, true);
+    esfera_foquito8.setImTexture("luz2.ppm");
+
+    Punto3D foquito9(445, 570, 0);
+    Esfera esfera_foquito9(foquito9, 30, true);
+    esfera_foquito9.setImTexture("luz1.ppm");
+
+    Punto3D foquito10(590, 545, 0);
+    Esfera esfera_foquito10(foquito10, 55, true);
+    esfera_foquito10.setImTexture("luz2.ppm");
+    
+    Punto3D foquito11(735, 570, 0);
+    Esfera esfera_foquito11(foquito11, 30, true);
+    esfera_foquito11.setImTexture("luz1.ppm");
+    
+    Punto3D foquito12(880, 545, 0);
+    Esfera esfera_foquito12(foquito12, 55, true);
+    esfera_foquito12.setImTexture("luz2.ppm");
+
+//logo
+    Punto3D logotipo(-850, -405, 0);
+    Esfera esfera_logotipo(logotipo, 90, true);
+    esfera_logotipo.setImTexture("logo_1.ppm");  
+
+//orejas
 
     Punto3D A_orejaIzquierda(-80,220,-100);
     Punto3D B_orejaIzquierda(-65,190,-100);
@@ -507,19 +581,35 @@ int main()
 
     escena.push_back(&esfera_cara);
     escena.push_back(&esfera_fiesta);
-
     
+    escena.push_back(&esfera_colores1);
     escena.push_back(&esfera_colores2);
-    
+    escena.push_back(&esfera_colores3);
     escena.push_back(&esfera_colores4);
     escena.push_back(&esfera_colores5);
-    
-    escena.push_back(&esfera_colores7);
-    escena.push_back(&esfera_colores1);
-    escena.push_back(&esfera_colores3);
     escena.push_back(&esfera_colores6);
+    escena.push_back(&esfera_colores7);
     escena.push_back(&esfera_colores8);
+
+    escena.push_back(&esfera_deporte1);
+    escena.push_back(&esfera_deporte2);
+    escena.push_back(&esfera_deporte3);
+    escena.push_back(&esfera_deporte4);
+
+    escena.push_back(&esfera_foquito1);
+    escena.push_back(&esfera_foquito2);
+    escena.push_back(&esfera_foquito3);
+    escena.push_back(&esfera_foquito4);
+    escena.push_back(&esfera_foquito5);
+    escena.push_back(&esfera_foquito6);
+    escena.push_back(&esfera_foquito7);
+    escena.push_back(&esfera_foquito8);
+    escena.push_back(&esfera_foquito9);
+    escena.push_back(&esfera_foquito10);
+    escena.push_back(&esfera_foquito11);
+    escena.push_back(&esfera_foquito12);
     
+    escena.push_back(&esfera_logotipo); 
 
     escena.push_back(&orejaIzquierda);
     escena.push_back(&orejaDerecha);
